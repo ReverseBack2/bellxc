@@ -1,11 +1,11 @@
-export const themes = ["original", "heritage", "pace", "night"] as const;
+export const themes = ["pace", "eclipse", "voltage", "dawn"] as const;
 export type Theme = (typeof themes)[number];
 
 export const themeDetails: Record<Theme, { name: string; eyebrow: string; description: string }> = {
-  original: { name: "Original", eyebrow: "Squarespace migration", description: "A clean, faithful rendition of the existing site." },
-  heritage: { name: "Heritage", eyebrow: "Editorial tradition", description: "Warm paper, collegiate type, and Bellarmine history." },
-  pace: { name: "Pace", eyebrow: "Youthful energy", description: "A bright, kinetic direction inspired by race-day graphics." },
-  night: { name: "Night Run", eyebrow: "Focused performance", description: "A high-contrast, atmospheric take for a modern team." },
+  pace: { name: "Night Pace", eyebrow: "Heavy type, deep navy", description: "Pace’s italic race-day lettering carried into the Night Run palette." },
+  eclipse: { name: "Eclipse", eyebrow: "Blackout technical", description: "Carbon black, condensed headlines, and cut corners for a race-data feel." },
+  voltage: { name: "Voltage", eyebrow: "Electric indigo", description: "The same heavy type softened by glowing gradients and rounded panels." },
+  dawn: { name: "First Light", eyebrow: "Sunrise practice", description: "Deep navy warmed by amber, built around early-morning miles." },
 };
 
 export const navigation = [

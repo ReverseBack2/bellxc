@@ -87,9 +87,9 @@ The event loader in `lib/events.ts` validates required fields at build time. No 
 
 The original Squarespace routes are preserved beneath each design prefix:
 
-- `/original`
-- `/heritage`
-- `/pace`
-- `/night`
+- `/pace` — Night Pace, the heavy italic race-day type in the deep navy palette
+- `/eclipse` — blackout carbon with condensed headlines and cut corners
+- `/voltage` — the same heavy type over electric indigo, glow, and rounded panels
+- `/dawn` — First Light, deep navy warmed by sunrise amber
 
 Each includes About, Calendar, Meet Info, Meet 101, Meet Types, Useful Links, Photos, 2024 Photos, and 2023 Photos.
