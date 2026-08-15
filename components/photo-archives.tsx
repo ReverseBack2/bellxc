@@ -25,7 +25,7 @@ const photoArchives2025: Album[] = [
     meet: "Clovis Invitational",
     groups: [
       {
-        name: "Photos",
+        name: "Varsity",
         href: "https://photos.google.com/share/AF1QipPaH261KTFFH7ZOIuCDQkb566DRGBGBr3E8Ey3K3keJ-DB7JCmaozBVkNLyTwPNfQ?key=T09FUzRheTI0SkhUTEozck9EMjhGNVB0ekM2STd3",
       },
     ],
@@ -34,7 +34,7 @@ const photoArchives2025: Album[] = [
     meet: "State",
     groups: [
       {
-        name: "CIF STATE 2025",
+        name: "Varsity",
         href: "https://photos.google.com/share/AF1QipPBfz5l1Lb_GHOksdYm-Db41kplIn3SVRBmaxkkZImGMiaeV8s8oxM2RMIS0gzkzA?key=OVJPeG1jNzkwemJsUlgwNzJqaERheVRjVW9zdm1n",
       },
     ],
