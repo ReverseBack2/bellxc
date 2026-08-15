@@ -89,7 +89,12 @@ export function AthleticCalendarPage() {
       <header className="page-head">
         <p className="eyebrow">The season</p>
         <h1>Calendar</h1>
-        <p className="lede">2026 Bellarmine Cross Country race dates currently posted on Athletic.net.</p>
+        <p className="lede">
+          2026 Bellarmine Cross Country race dates currently posted on Athletic.net.{" "}
+          <a href={athleticNetUrl} target="_blank" rel="noreferrer">
+            View the full calendar on Athletic.net <ExternalLink style={{ width: 16, height: 16, verticalAlign: "text-bottom" }} />
+          </a>
+        </p>
       </header>
 
       <section className="event-list">
