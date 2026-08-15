@@ -2,7 +2,44 @@ import Link from "next/link";
 import { Camera, ExternalLink } from "lucide-react";
 import { photoArchives, type Album } from "@/lib/content";
 
-const photoArchives2025: Album[] = [];
+const photoArchives2025: Album[] = [
+  {
+    meet: "WCAL 1",
+    groups: [
+      {
+        name: "Varsity",
+        href: "https://photos.google.com/share/AF1QipOcnim-78td5zI_ePWTwS7pnk7vZX_cNJ0vaJN6Sfrqw17vnM8bpuWq2GncnHjpzA?key=Y084bmstc01nWDBHXzJsOThNVm01UU42SEZUSWp3",
+      },
+    ],
+  },
+  {
+    meet: "Westmoor",
+    groups: [
+      {
+        name: "Varsity",
+        href: "https://photos.google.com/share/AF1QipNT7OQznMNZfvw1ZMnJ5F-6DB3vMN8t30Q-49rkwLfAXqt7N2vL9-iNaGfIPYWBXg?key=RWpqNnpDUVFhYkNyMlNsVDdxR3lqdjZrOWVZbXVn",
+      },
+    ],
+  },
+  {
+    meet: "Clovis Invitational",
+    groups: [
+      {
+        name: "Photos",
+        href: "https://photos.google.com/share/AF1QipPaH261KTFFH7ZOIuCDQkb566DRGBGBr3E8Ey3K3keJ-DB7JCmaozBVkNLyTwPNfQ?key=T09FUzRheTI0SkhUTEozck9EMjhGNVB0ekM2STd3",
+      },
+    ],
+  },
+  {
+    meet: "State",
+    groups: [
+      {
+        name: "CIF STATE 2025",
+        href: "https://photos.google.com/share/AF1QipPBfz5l1Lb_GHOksdYm-Db41kplIn3SVRBmaxkkZImGMiaeV8s8oxM2RMIS0gzkzA?key=OVJPeG1jNzkwemJsUlgwNzJqaERheVRjVW9zdm1n",
+      },
+    ],
+  },
+];
 
 function galleryCount(albums: Album[]) {
   return albums.reduce((total, album) => total + album.groups.length, 0);
