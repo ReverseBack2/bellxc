@@ -7,6 +7,10 @@ const photoArchives2025: Album[] = [
     meet: "Lowell Invitational",
     groups: [
       {
+        name: "Freshmen",
+        href: "https://photos.google.com/share/AF1QipMoffsPXncd439NnkXXpUrYU1BQophz8UQkKP-uwP1tiaWnPCY2fSh-lTZi6QF-Ng?key=SGN4Wk83OFdGdlhEMlBOVHBjcWhvMy1Bei0ya05R",
+      },
+      {
         name: "Sophomores",
         href: "https://photos.google.com/share/AF1QipOdVs8lM4NODCDwJJWeIY3MnHuNDd3m-uiVHoyHtFuN4MyxD-gw2hTWu1xlL_k4JA?key=blNGMmNWaXVCd3poa040SnRSQW0yeDVrVTN4UmFR",
       },
