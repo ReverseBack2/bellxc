@@ -4,6 +4,15 @@ import { photoArchives, type Album } from "@/lib/content";
 
 const photoArchives2025: Album[] = [
   {
+    meet: "Lowell Invitational",
+    groups: [
+      {
+        name: "Sophomores",
+        href: "https://photos.google.com/share/AF1QipOdVs8lM4NODCDwJJWeIY3MnHuNDd3m-uiVHoyHtFuN4MyxD-gw2hTWu1xlL_k4JA?key=blNGMmNWaXVCd3poa040SnRSQW0yeDVrVTN4UmFR",
+      },
+    ],
+  },
+  {
     meet: "WCAL 1",
     groups: [
       {
