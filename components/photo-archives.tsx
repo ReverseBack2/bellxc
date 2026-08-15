@@ -31,6 +31,15 @@ const photoArchives2025: Album[] = [
     ],
   },
   {
+    meet: "WCAL 2",
+    groups: [
+      {
+        name: "Freshmen",
+        href: "https://photos.google.com/share/AF1QipM8r2_q43vX-HiA1VngMB7YYP7HUEzYdB2BxgCPlJZFoEGU1c5K214uZv6-cg1wFw?key=aW4tTGFrdUlfeXliTlFOeDNrVW5TdGhfcldkOF9R",
+      },
+    ],
+  },
+  {
     meet: "WCAL 3",
     groups: [
       {
