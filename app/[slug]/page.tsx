@@ -1,10 +1,11 @@
 import { notFound } from "next/navigation";
 import { SiteShell } from "@/components/site-shell";
-import { AboutPage, ArchivePage, CalendarPage, Meet101Page, MeetInfoPage, MeetTypesPage, PhotosPage, UsefulLinksPage } from "@/components/pages";
+import { AthleticCalendarPage } from "@/components/athletic-calendar";
+import { AboutPage, ArchivePage, Meet101Page, MeetInfoPage, MeetTypesPage, PhotosPage, UsefulLinksPage } from "@/components/pages";
 
 const pages = {
   about: <AboutPage />,
-  calendar: <CalendarPage />,
+  calendar: <AthleticCalendarPage />,
   "meet-info": <MeetInfoPage />,
   meet101: <Meet101Page />,
   "meet-types": <MeetTypesPage />,
