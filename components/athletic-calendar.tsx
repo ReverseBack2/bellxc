@@ -1,28 +1,56 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, MapPin } from "lucide-react";
 
-const athleticCalendarEmbed = `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root { color-scheme: light; }
-    * { box-sizing: border-box; }
-    body { margin: 0; padding: 18px; background: #fff; color: #171717; font-family: Arial, Helvetica, sans-serif; }
-    #ANETxcCAL_Container { width: 100%; }
-    #ANETxcCAL_Container table { width: 100%; border-collapse: collapse; font-family: Arial, Helvetica, sans-serif; font-size: 14px; border: 0; }
-    #ANETxcCAL_Container td { padding: 16px 12px; border-bottom: 1px solid #d9d9d9; vertical-align: top; }
-    .ANETxcCAL_SeasonTitle { color: #2f5f98; font-size: 22px; font-weight: 700; }
-    .ANETxcCAL_MeetDate { width: 120px; color: #676767; font-weight: 700; }
-    .ANETxcCAL_MeetTitle a { color: #1d3d6e; font-weight: 700; text-decoration: none; }
-    .ANETxcCAL_MeetTitle a:hover { text-decoration: underline; }
-    .ANETxcCAL_MoreInfo { color: #676767; font-style: normal; line-height: 1.5; }
-  </style>
-</head>
-<body>
-  <script src="https://www.athletic.net/api/1/RemoteHTML.ashx?Report=XCCalendar1&Style=1&SchoolID=1101&Season=2026" type="text/javascript"></script>
-</body>
-</html>`;
+const races = [
+  {
+    date: "2026-09-04",
+    title: "Baylands Invitational",
+    location: "Baylands Park, Sunnyvale, CA",
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Baylands+Park+Sunnyvale+CA",
+    eventUrl: "https://www.athletic.net/team/1101/cross-country/2026",
+  },
+  {
+    date: "2026-09-12",
+    title: "Lowell Invitational",
+    location: "Golden Gate Park, San Francisco, CA",
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Golden+Gate+Park+San+Francisco+CA",
+    eventUrl: "https://www.athletic.net/team/1101/cross-country/2026",
+  },
+  {
+    date: "2026-10-10",
+    title: "Clovis Invitational",
+    location: "Woodward Park, Fresno, CA",
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Woodward+Park+Fresno+CA",
+    eventUrl: "https://www.athletic.net/team/1101/cross-country/2026",
+  },
+  {
+    date: "2026-10-15",
+    title: "WCAL II",
+    location: "Baylands Park, Sunnyvale, CA",
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Baylands+Park+Sunnyvale+CA",
+    eventUrl: "https://www.athletic.net/team/1101/cross-country/2026",
+  },
+  {
+    date: "2026-10-23",
+    title: "Clovis North Twilight Invitational",
+    location: "Clovis North High School, Fresno, CA",
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Clovis+North+High+School+Fresno+CA",
+    eventUrl: "https://www.athletic.net/Help/CrossCountry.aspx?Meet=273393",
+  },
+  {
+    date: "2026-11-14",
+    title: "CCS Championships",
+    location: "Crystal Springs Cross Country Course, Belmont, CA",
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Crystal+Springs+Cross+Country+Course+Belmont+CA",
+    eventUrl: "https://www.athletic.net/team/1101/cross-country/2026",
+  },
+  {
+    date: "2026-11-28",
+    title: "CIF State Cross Country Championship",
+    location: "Woodward Park, Fresno, CA",
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Woodward+Park+Fresno+CA",
+    eventUrl: "https://www.athletic.net/team/1101/cross-country/2026",
+  },
+] as const;
 
 export function AthleticCalendarPage() {
   return (
@@ -30,41 +58,41 @@ export function AthleticCalendarPage() {
       <header className="page-head">
         <p className="eyebrow">The season</p>
         <h1>Calendar</h1>
-        <p className="lede">The official 2026 Bellarmine Cross Country race calendar, synced from Athletic.net.</p>
+        <p className="lede">2026 Bellarmine Cross Country race dates currently posted for the season.</p>
       </header>
 
-      <section className="document-card">
-        <div>
-          <ExternalLink />
-          <h2>2026 race schedule</h2>
-          <p>
-            Meet dates and race information come directly from Athletic.net. Select a meet name to open its event page for location and additional details.
-          </p>
-          <a
-            className="text-link"
-            href="https://www.athletic.net/team/1101/cross-country/2026"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open Athletic.net <ExternalLink />
-          </a>
-        </div>
-        <iframe
-          srcDoc={athleticCalendarEmbed}
-          title="Bellarmine Cross Country 2026 Athletic.net calendar"
-          sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
-        />
+      <section className="event-list">
+        {races.map((race) => {
+          const date = new Date(`${race.date}T12:00:00`);
+          return (
+            <article key={`${race.date}-${race.title}`}>
+              <time dateTime={race.date}>
+                <span>{date.toLocaleDateString("en-US", { month: "short" })}</span>
+                <strong>{date.getDate()}</strong>
+                <em>{date.toLocaleDateString("en-US", { weekday: "short" })}</em>
+              </time>
+              <div className="event-copy">
+                <div><span>Race</span></div>
+                <h2>{race.title}</h2>
+                <p>
+                  <a href={race.locationUrl} target="_blank" rel="noreferrer">
+                    <MapPin style={{ width: 16, height: 16, verticalAlign: "text-bottom", marginRight: 7 }} />
+                    {race.location}
+                  </a>
+                </p>
+                <a className="text-link" href={race.eventUrl} target="_blank" rel="noreferrer">
+                  Athletic.net details <ExternalLink />
+                </a>
+              </div>
+            </article>
+          );
+        })}
       </section>
 
       <div className="calendar-footer">
-        <p>Race dates and meet information update whenever Bellarmine changes its team calendar on Athletic.net.</p>
-        <a
-          className="text-link"
-          href="https://www.athletic.net/team/1101/cross-country/2026"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Full schedule & results <ExternalLink />
+        <p>This page lists the 2026 races currently confirmed from public schedule information. Athletic.net remains the source for the latest team additions and changes.</p>
+        <a className="text-link" href="https://www.athletic.net/team/1101/cross-country/2026" target="_blank" rel="noreferrer">
+          Full Athletic.net calendar <ExternalLink />
         </a>
       </div>
     </div>
