@@ -1,13 +1,3 @@
-export const themes = ["pace", "eclipse", "voltage", "dawn"] as const;
-export type Theme = (typeof themes)[number];
-
-export const themeDetails: Record<Theme, { name: string; eyebrow: string; description: string }> = {
-  pace: { name: "Night Pace", eyebrow: "Heavy type, deep navy", description: "Pace’s italic race-day lettering carried into the Night Run palette." },
-  eclipse: { name: "Eclipse", eyebrow: "Blackout technical", description: "Carbon black, condensed headlines, and cut corners for a race-data feel." },
-  voltage: { name: "Voltage", eyebrow: "Electric indigo", description: "The same heavy type softened by glowing gradients and rounded panels." },
-  dawn: { name: "First Light", eyebrow: "Sunrise practice", description: "Deep navy warmed by amber, built around early-morning miles." },
-};
-
 export const navigation = [
   { slug: "about", label: "About" },
   { slug: "calendar", label: "Calendar" },

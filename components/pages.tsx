@@ -1,25 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Camera, ChevronRight, Clock3, ExternalLink, FileText, Flag, Mountain, Trophy, Users } from "lucide-react";
-import { meetTypes, photoArchives, timingLinks, usefulLinks, type Theme } from "@/lib/content";
+import { meetTypes, photoArchives, timingLinks, usefulLinks } from "@/lib/content";
 import { getCalendarEvents } from "@/lib/events";
 
 const PageHead = ({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: string }) => (
   <header className="page-head"><p className="eyebrow">{eyebrow}</p><h1>{title}</h1>{intro && <p className="lede">{intro}</p>}</header>
 );
 
-export function HomePage({ theme }: { theme: Theme }) {
+export function HomePage() {
   return (
     <>
       <section className="hero">
         <Image src="/images/runner.png" alt="Bellarmine cross country runner on the trail" fill priority sizes="100vw" />
         <div className="hero-shade" />
-        <div className="hero-copy"><p className="eyebrow">Bellarmine College Preparatory</p><h1>It’s out<br />there.</h1><p>Find your line. Run as one.</p><Link className="button" href={`/${theme}/about`}>Meet the team <ChevronRight /></Link></div>
+        <div className="hero-copy"><p className="eyebrow">Bellarmine College Preparatory</p><h1>It’s out<br />there.</h1><p>Find your line. Run as one.</p><Link className="button" href="/about">Meet the team <ChevronRight /></Link></div>
         <p className="hero-index">XC · San Jose, CA</p>
       </section>
       <section className="home-intro">
         <div><p className="eyebrow">The Bellarmine brotherhood</p><h2>More than a team.<br />A village in motion.</h2></div>
-        <div><p>Two hundred runners. One shared pursuit. Bellarmine Cross Country is built on the belief that every stride is stronger when we take it together.</p><Link className="text-link" href={`/${theme}/calendar`}>See the season <ArrowUpRight /></Link></div>
+        <div><p>Two hundred runners. One shared pursuit. Bellarmine Cross Country is built on the belief that every stride is stronger when we take it together.</p><Link className="text-link" href="/calendar">See the season <ArrowUpRight /></Link></div>
       </section>
     </>
   );
@@ -34,8 +34,8 @@ export function CalendarPage() {
   return <div className="content-page"><PageHead eyebrow="The season" title="Calendar" intro="Meet dates and team events, managed as simple Markdown files in the site repository." /><div className="example-notice"><strong>Demonstration schedule</strong><p>The events below are explicitly fictional examples—not official Bellarmine dates. Replace them with confirmed team information before publishing.</p></div><section className="event-list">{events.map((event) => { const date = new Date(`${event.date}T12:00:00`); return <article key={event.slug}><time dateTime={event.date}><span>{date.toLocaleDateString("en-US", { month: "short" })}</span><strong>{date.getDate()}</strong><em>{date.toLocaleDateString("en-US", { weekday: "short" })}</em></time><div className="event-copy"><div><span>{event.category}</span>{event.example && <b>Example only</b>}</div><h2>{event.title}</h2><p>{event.details}</p><dl><div><dt>Time</dt><dd>{event.time}</dd></div><div><dt>Location</dt><dd>{event.location}</dd></div></dl></div></article>; })}</section><div className="calendar-footer"><p>The latest official race schedule and results are also available through Athletic.net.</p><a className="text-link" href="https://www.athletic.net/team/1101/cross-country/2026" target="_blank" rel="noreferrer">Open Athletic.net <ExternalLink /></a></div></div>;
 }
 
-export function MeetInfoPage({ theme }: { theme: Theme }) {
-  return <div className="content-page"><PageHead eyebrow="Race day, decoded" title="Meet info" intro="New to cross country? Start here for a quick guide to how meets work and what to expect." /><section className="feature-links"><Link href={`/${theme}/meet101`}><span className="icon-box"><Flag /></span><span><small>Start here</small><strong>Meet 101</strong><em>A practical parent and runner guide</em></span><ArrowUpRight /></Link><Link href={`/${theme}/meet-types`}><span className="icon-box"><Trophy /></span><span><small>Know the season</small><strong>Meet Types</strong><em>Invitationals, WCAL, CCS, and State</em></span><ArrowUpRight /></Link></section></div>;
+export function MeetInfoPage() {
+  return <div className="content-page"><PageHead eyebrow="Race day, decoded" title="Meet info" intro="New to cross country? Start here for a quick guide to how meets work and what to expect." /><section className="feature-links"><Link href="/meet101"><span className="icon-box"><Flag /></span><span><small>Start here</small><strong>Meet 101</strong><em>A practical parent and runner guide</em></span><ArrowUpRight /></Link><Link href="/meet-types"><span className="icon-box"><Trophy /></span><span><small>Know the season</small><strong>Meet Types</strong><em>Invitationals, WCAL, CCS, and State</em></span><ArrowUpRight /></Link></section></div>;
 }
 
 export function Meet101Page() {
@@ -51,8 +51,8 @@ export function UsefulLinksPage() {
   return <div className="content-page"><PageHead eyebrow="Runner resources" title="Useful links" intro="Schedules, history, live results, and key information for runners and families." /><section className="link-section"><h2>Team & race resources</h2><div className="resource-grid">{usefulLinks.map((item) => <a key={item.name} href={item.href} target="_blank" rel="noreferrer"><strong>{item.name}</strong><p>{item.description}</p><ArrowUpRight /></a>)}</div></section><section className="link-section"><h2>Live timing</h2><p className="section-intro">The timing provider changes by meet. The event will usually post which live-results service is being used.</p><div className="resource-grid compact">{timingLinks.map((item) => <a key={item.name} href={item.href} target="_blank" rel="noreferrer"><Clock3 /><strong>{item.name}</strong><p>{item.description}</p><ArrowUpRight /></a>)}</div></section><aside className="callout"><span>California safety policy</span><p>California requires high school sports to monitor and adjust practices based on heat and Wet Bulb Globe Temperature readings.</p><a href="https://cifss.org/wp-content/uploads/2024/07/Acclimatization-23-24.pdf" target="_blank" rel="noreferrer">Read the CIF policy <ArrowUpRight /></a></aside></div>;
 }
 
-export function PhotosPage({ theme }: { theme: Theme }) {
-  return <div className="content-page"><PageHead eyebrow="Through the lens" title="Photo archives" intro="Race-day moments, team portraits, and finish-line memories from recent seasons." /><section className="year-grid"><Link href={`/${theme}/photos2024`}><span>20</span><strong>24</strong><em>14 galleries</em><Camera /></Link><Link href={`/${theme}/photos2023`}><span>20</span><strong>23</strong><em>11 galleries</em><Camera /></Link></section></div>;
+export function PhotosPage() {
+  return <div className="content-page"><PageHead eyebrow="Through the lens" title="Photo archives" intro="Race-day moments, team portraits, and finish-line memories from recent seasons." /><section className="year-grid"><Link href="/photos2024"><span>20</span><strong>24</strong><em>14 galleries</em><Camera /></Link><Link href="/photos2023"><span>20</span><strong>23</strong><em>11 galleries</em><Camera /></Link></section></div>;
 }
 
 export function ArchivePage({ year }: { year: "2024" | "2023" }) {

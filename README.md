@@ -68,11 +68,4 @@ Required fields are `title`, `date`, `time`, `location`, and `category`. Set `ex
 
 The event loader in `lib/events.ts` validates required fields at build time. No database or admin system is needed—add or edit Markdown, then push to `main` to rebuild the site.
 
-The original Squarespace routes are preserved beneath each design prefix:
-
-- `/pace` — Night Pace, the heavy italic race-day type in the deep navy palette
-- `/eclipse` — blackout carbon with condensed headlines and cut corners
-- `/voltage` — the same heavy type over electric indigo, glow, and rounded panels
-- `/dawn` — First Light, deep navy warmed by sunrise amber
-
-Each includes About, Calendar, Meet Info, Meet 101, Meet Types, Useful Links, Photos, 2024 Photos, and 2023 Photos.
+The site uses the Night Pace visual identity throughout. The homepage is served at `/`, with clean top-level routes for About, Calendar, Meet Info, Meet 101, Meet Types, Useful Links, Photos, 2024 Photos, and 2023 Photos.
