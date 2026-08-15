@@ -71,5 +71,5 @@ export const meetTypes = [
   { title: "Invitationals", text: "Meets that Bell competes in outside of league competition. Most are open to the whole team, though a few are varsity-only. They are generally held on weekends, and athletes are expected to attend unless they have communicated otherwise with a coach." },
   { title: "WCALs", text: "The three league events are WCAL 1, WCAL 2, and WCAL 3 (League Finals). Traditional venues are Golden Gate Park, Baylands Park in Sunnyvale, and Crystal Springs in Belmont. Team scores determine league champions at the Freshman, Sophomore, JV, and Varsity levels." },
   { title: "CCS", text: "A varsity-only postseason race, also run at Crystal Springs. California cross country divisions are based on school enrollment; Bellarmine has historically competed in Division I." },
-  { title: "State", text: "Varsity must finish in the top two at CCS Division I to qualify. The California State Meet is held each year at Woodward Park in Fresno, usually on the Saturday after Thanksgiving." },
+  { title: "State", text: "Varsity must finish in the top three at CCS Division I to qualify. The California State Meet is held each year at Woodward Park in Fresno, usually on the Saturday after Thanksgiving." },
 ] as const;
