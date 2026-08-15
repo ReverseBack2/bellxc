@@ -8,24 +8,28 @@ const races = [
     title: "Steps4SMILEs 5k/10k Charity Race",
     location: "Baylands Park, 999 E Caribbean Dr, Sunnyvale, CA",
     locationUrl: "https://www.google.com/maps/search/?api=1&query=999+E+Caribbean+Dr+Sunnyvale+CA+94089",
+    eventUrl: "https://www.athletic.net/CrossCountry/meet/278731",
   },
   {
     date: "2026-09-04",
     title: "Baylands Invitational",
     location: "Baylands Park, Sunnyvale, CA",
     locationUrl: "https://www.google.com/maps/search/?api=1&query=Baylands+Park+Sunnyvale+CA",
+    eventUrl: "https://www.athletic.net/CrossCountry/meet/273592",
   },
   {
     date: "2026-09-23",
     title: "WCAL I",
-    location: "See Athletic.net for meet location",
-    locationUrl: athleticNetUrl,
+    location: "Polo Fields, Golden Gate Park, San Francisco, CA",
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Polo+Fields+Golden+Gate+Park+San+Francisco+CA",
+    eventUrl: athleticNetUrl,
   },
   {
     date: "2026-09-26",
     title: "RAM Invitational",
     location: "Westmoor High School, Daly City, CA",
     locationUrl: "https://www.google.com/maps/search/?api=1&query=Westmoor+High+School+Daly+City+CA",
+    eventUrl: "https://www.athletic.net/CrossCountry/meet/276451",
   },
   {
     date: "2026-10-09",
@@ -33,42 +37,49 @@ const races = [
     title: "47th Asics Clovis Invitational",
     location: "Woodward Park, Fresno, CA",
     locationUrl: "https://www.google.com/maps/search/?api=1&query=Woodward+Park+Fresno+CA",
+    eventUrl: "https://www.athletic.net/CrossCountry/meet/274719",
   },
   {
     date: "2026-10-10",
     title: "Crystal Springs Invitational",
     location: "Crystal Springs Cross Country Course, Belmont, CA",
     locationUrl: "https://www.google.com/maps/search/?api=1&query=Crystal+Springs+Cross+Country+Course+Belmont+CA",
+    eventUrl: athleticNetUrl,
   },
   {
     date: "2026-10-15",
     title: "WCAL II",
     location: "Baylands Park, Sunnyvale, CA",
     locationUrl: "https://www.google.com/maps/search/?api=1&query=Baylands+Park+Sunnyvale+CA",
+    eventUrl: "https://www.athletic.net/CrossCountry/meet/274263",
   },
   {
     date: "2026-10-23",
     title: "Clovis North Twilight Invitational",
     location: "Clovis North High School, 2770 E International Ave, Fresno, CA",
     locationUrl: "https://www.google.com/maps/search/?api=1&query=2770+E+International+Ave+Fresno+CA+93730",
+    eventUrl: "https://www.athletic.net/CrossCountry/meet/273393",
   },
   {
     date: "2026-11-04",
     title: "WCAL Championship",
-    location: "See Athletic.net for meet location",
-    locationUrl: athleticNetUrl,
+    location: "Crystal Springs Cross Country Course, Belmont, CA",
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Crystal+Springs+Cross+Country+Course+Belmont+CA",
+    eventUrl: "https://www.athletic.net/CrossCountry/meet/274262",
   },
   {
     date: "2026-11-14",
     title: "2026 CIF Central Coast Section Championships",
     location: "Crystal Springs Cross Country Course, Belmont, CA",
     locationUrl: "https://www.google.com/maps/search/?api=1&query=Crystal+Springs+Cross+Country+Course+Belmont+CA",
+    eventUrl: "https://www.athletic.net/CrossCountry/meet/274261",
   },
   {
     date: "2026-11-28",
     title: "CIF State Cross Country Championship",
     location: "Woodward Park, Fresno, CA",
     locationUrl: "https://www.google.com/maps/search/?api=1&query=Woodward+Park+Fresno+CA",
+    eventUrl: "https://www.athletic.net/CrossCountry/meet/273403",
   },
 ] as const;
 
@@ -106,7 +117,7 @@ export function AthleticCalendarPage() {
                     {race.location}
                   </a>
                 </p>
-                <a className="text-link" href={athleticNetUrl} target="_blank" rel="noreferrer">
+                <a className="text-link" href={race.eventUrl} target="_blank" rel="noreferrer">
                   Athletic.net details <ExternalLink />
                 </a>
               </div>
