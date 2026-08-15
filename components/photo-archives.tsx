@@ -31,6 +31,24 @@ const photoArchives2025: Album[] = [
     ],
   },
   {
+    meet: "WCAL 3",
+    groups: [
+      {
+        name: "Freshmen",
+        href: "https://photos.google.com/share/AF1QipMiSXzvSPrpyFLmwjBQKSLqlqkAD9XmZNEoP8zS_wNGXLmL4vhx9g_EqzpFw5RheA?key=Ukg2M2xCdkpWS1BlcVFUcVdDZ0gzNWVHM20ybGZ3",
+      },
+    ],
+  },
+  {
+    meet: "CCS",
+    groups: [
+      {
+        name: "Varsity",
+        href: "https://photos.google.com/share/AF1QipOc5cbXNFBFCdHWB5UgZjeD2kx8pxrHUJNHufs4SKUrH2GOOvbGrbtQq4ZehZtHzg?key=QlJJVFNYcDVKSUdiZWpxVktuTS1oY0pwNGtQdWtn",
+      },
+    ],
+  },
+  {
     meet: "State",
     groups: [
       {
