@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import { SiteShell } from "@/components/site-shell";
 import { AthleticCalendarPage } from "@/components/athletic-calendar";
-import { AboutPage, ArchivePage, Meet101Page, MeetInfoPage, MeetTypesPage, PhotosPage, UsefulLinksPage } from "@/components/pages";
+import { ArchivePage, PhotosPage } from "@/components/photo-archives";
+import { AboutPage, Meet101Page, MeetInfoPage, MeetTypesPage, UsefulLinksPage } from "@/components/pages";
 
 const pages = {
   about: <AboutPage />,
@@ -11,6 +12,7 @@ const pages = {
   "meet-types": <MeetTypesPage />,
   "useful-links": <UsefulLinksPage />,
   photos: <PhotosPage />,
+  photos2025: <ArchivePage year="2025" />,
   photos2024: <ArchivePage year="2024" />,
   photos2023: <ArchivePage year="2023" />,
 } as const;
