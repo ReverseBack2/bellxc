@@ -1,9 +1,6 @@
 import records from "@/data/course-records.json";
 import styles from "./course-records.module.css";
 
-// Class-year lists use grade at race; JV and Varsity lists use XCStats squad.
-const categories = ["Overall", "Freshman", "Sophomore", "JV", "Varsity"] as const;
-
 type RecordRow = {
   rank: number;
   runner: string;
@@ -17,12 +14,14 @@ type RecordRow = {
   sourceUrl: string;
 };
 
-type Course = {
+type RaceCourse = {
+  race: string;
   course: string;
   distanceMiles: string;
+  categories: string[];
   performanceCount: number;
   uniqueRunnerCount: number;
-  records: Record<(typeof categories)[number], RecordRow[]>;
+  records: Record<string, RecordRow[]>;
 };
 
 function slugify(value: string) {
@@ -46,7 +45,7 @@ function displayDate(value: string) {
 }
 
 export function CourseRecordsPage() {
-  const courses = records.courses as Course[];
+  const races = records.courses as RaceCourse[];
 
   return (
     <div className={styles.page}>
@@ -54,47 +53,47 @@ export function CourseRecordsPage() {
         <p className={styles.eyebrow}>Bellarmine history</p>
         <h1>Course Records</h1>
         <p className={styles.lede}>
-          The fastest verified Bellarmine performances in the XCStats archive, separated by exact course and race distance.
+          The fastest verified Bellarmine performances in the XCStats archive, organized by race name, course, and distance.
         </p>
       </header>
 
       <aside className={styles.method}>
         <strong>How the lists work</strong>
         <p>
-          Each runner appears once per list with his fastest recorded performance on that exact course configuration. Freshman and Sophomore lists are based on the runner&apos;s grade at the time of the race, so a freshman or sophomore still receives class-record credit even when racing JV or Varsity. JV and Varsity lists use the race squad recorded by XCStats. Different course names or distances are kept separate.
+          Different races at the same venue are kept separate. Each runner appears once per list with his fastest qualifying performance in that race. Freshman and Sophomore class records use grade at race even when an athlete races up. Baylands Invitational is organized by grade, so its lists are Freshman, Sophomore, Junior, and Senior rather than JV and Varsity. Other meets use the applicable XCStats race squads.
         </p>
       </aside>
 
-      <nav className={styles.index} aria-label="Course record sections">
-        <h2>Courses</h2>
+      <nav className={styles.index} aria-label="Race record sections">
+        <h2>Races</h2>
         <div className={styles.courseLinks}>
-          {courses.map((course) => {
-            const id = slugify(`${course.course}-${course.distanceMiles}`);
+          {races.map((race) => {
+            const id = slugify(`${race.race}-${race.course}-${race.distanceMiles}`);
             return (
               <a key={id} href={`#${id}`}>
-                <strong>{cleanCourseName(course.course)}</strong>
-                <span>{course.distanceMiles} mi · {course.uniqueRunnerCount} runners</span>
+                <strong>{race.race}</strong>
+                <span>{cleanCourseName(race.course)} · {race.distanceMiles} mi</span>
               </a>
             );
           })}
         </div>
       </nav>
 
-      {courses.map((course) => {
-        const id = slugify(`${course.course}-${course.distanceMiles}`);
+      {races.map((race) => {
+        const id = slugify(`${race.race}-${race.course}-${race.distanceMiles}`);
         return (
           <section className={styles.course} id={id} key={id}>
             <div className={styles.courseHead}>
-              <h2>{cleanCourseName(course.course)}</h2>
+              <h2>{race.race}</h2>
               <div className={styles.courseMeta}>
-                <strong>{course.distanceMiles} miles</strong>
-                {course.performanceCount.toLocaleString()} performances · {course.uniqueRunnerCount.toLocaleString()} runners
+                <strong>{cleanCourseName(race.course)} · {race.distanceMiles} miles</strong>
+                {race.performanceCount.toLocaleString()} performances · {race.uniqueRunnerCount.toLocaleString()} runners
               </div>
             </div>
 
             <div className={styles.groups}>
-              {categories.map((category, categoryIndex) => {
-                const rows = course.records[category] ?? [];
+              {race.categories.map((category, categoryIndex) => {
+                const rows = race.records[category] ?? [];
                 return (
                   <details className={styles.group} key={category} open={categoryIndex === 0}>
                     <summary>
@@ -110,7 +109,6 @@ export function CourseRecordsPage() {
                               <th>Runner</th>
                               <th>Time</th>
                               <th>Grad</th>
-                              <th>Meet</th>
                               <th>Date</th>
                             </tr>
                           </thead>
@@ -123,7 +121,6 @@ export function CourseRecordsPage() {
                                 </td>
                                 <td className={styles.time}>{row.time}</td>
                                 <td className={styles.year}>{row.gradYear ?? "—"}</td>
-                                <td className={styles.meet}>{row.event}</td>
                                 <td className={styles.date}>{displayDate(row.date)}</td>
                               </tr>
                             ))}
