@@ -4,15 +4,15 @@ on:
   push:
     branches: [course-records]
     paths:
-      - 'scripts/xcstats_probe.py'
+      - 'scripts/build_course_records.py'
       - '.github/workflows/xcstats-research.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  probe:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,4 +20,15 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      - run: python scripts/xcstats_probe.py
+      - run: python scripts/build_course_records.py
+      - name: Commit generated records
+        run: |
+          git config user.name "BellXC Records Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/course-records.json
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+          else
+            git commit -m "Generate verified XCStats course records"
+            git push
+          fi
