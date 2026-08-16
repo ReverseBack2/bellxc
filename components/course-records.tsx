@@ -81,7 +81,7 @@ export function CourseRecordsPage() {
         <p className={styles.eyebrow}>Bellarmine history</p>
         <h1>Course Records</h1>
         <p className={styles.lede}>
-          The fastest verified Bellarmine performances in the XCStats archive, organized by race name, course, and distance.
+          The fastest verified Bellarmine performances in the XCStats archive, grouped by race with course and distance selectors where needed.
         </p>
       </header>
 
