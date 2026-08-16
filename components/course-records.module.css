@@ -71,12 +71,12 @@
 }
 
 .courseLinks a {
-  min-height: 106px;
-  padding: 22px;
+  min-height: 88px;
+  padding: 18px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 14px;
+  gap: 10px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   transition: background .2s;
@@ -87,14 +87,14 @@
 }
 
 .courseLinks strong {
-  font: 700 18px/1.15 var(--display-font, Georgia, serif);
+  font: 700 17px/1.15 var(--display-font, Georgia, serif);
 }
 
 .courseLinks span {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: .11em;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
 
@@ -112,10 +112,41 @@
   align-items: end;
 }
 
+.raceTitleBlock {
+  min-width: 0;
+  flex: 1;
+}
+
 .courseHead h2 {
   margin: 0;
   font: 700 clamp(38px, 6vw, 72px)/.95 var(--display-font, Georgia, serif);
   letter-spacing: -.04em;
+}
+
+.variantPicker {
+  width: min(560px, 100%);
+  margin-top: 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.variantPicker span {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.variantPicker select {
+  width: 100%;
+  padding: 12px 42px 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 700 14px/1.2 inherit;
+  cursor: pointer;
 }
 
 .courseMeta {
