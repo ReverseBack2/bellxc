@@ -1,6 +1,6 @@
 "use client";
 
-// Course Records includes years used for each course/distance configuration and canonical meet names.
+// Bell Course Records includes years used for each course/distance configuration and canonical meet names.
 import { useMemo, useState } from "react";
 import records from "@/data/course-records.json";
 import styles from "./course-records.module.css";
@@ -157,7 +157,7 @@ export function CourseRecordsPage() {
     <div className={styles.page}>
       <header className={styles.head}>
         <p className={styles.eyebrow}>Bellarmine history</p>
-        <h1>Course Records</h1>
+        <h1>Bell Course Records</h1>
         <p className={styles.lede}>
           The fastest verified Bellarmine performances in the XCStats archive, grouped by race with course, distance, and years-used selectors where needed.
         </p>
