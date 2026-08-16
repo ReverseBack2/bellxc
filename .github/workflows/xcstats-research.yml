@@ -5,6 +5,11 @@ on:
     branches: [course-records]
     paths:
       - 'scripts/build_course_records.py'
+      - 'data/course-records.json'
+      - 'components/course-records.tsx'
+      - 'components/course-records.module.css'
+      - 'app/[slug]/page.tsx'
+      - 'lib/content.ts'
       - '.github/workflows/xcstats-research.yml'
   workflow_dispatch:
 
