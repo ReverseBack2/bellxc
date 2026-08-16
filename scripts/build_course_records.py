@@ -71,6 +71,42 @@ def normalize_squad(squad):
     return None
 
 
+def canonical_race_name(name):
+    """Keep different meets separate while collapsing obvious year-to-year spelling variants."""
+    value = re.sub(r"\s+", " ", name.strip())
+    if re.search(r"\bBaylands\s+Invitational\b", value, re.I):
+        return "Baylands Invitational"
+
+    wcal = re.fullmatch(r"WCAL\s*(?:#\s*)?(1|2|3|I|II|III)", value, re.I)
+    if wcal:
+        token = wcal.group(1).upper()
+        number = {"I": "1", "II": "2", "III": "3"}.get(token, token)
+        return f"WCAL {number}"
+
+    return value
+
+
+def categories_for_race(race):
+    # Baylands Invitational is raced by school grade, not JV/Varsity squad.
+    if race == "Baylands Invitational":
+        return ["Overall", "Freshman", "Sophomore", "Junior", "Senior"]
+    return ["Overall", "Freshman", "Sophomore", "JV", "Varsity"]
+
+
+def eligible_for_category(rows, category):
+    if category == "Overall":
+        return rows
+    grade_map = {
+        "Freshman": "Fr",
+        "Sophomore": "So",
+        "Junior": "Jr",
+        "Senior": "Sr",
+    }
+    if category in grade_map:
+        return [p for p in rows if p["grade"] == grade_map[category]]
+    return [p for p in rows if p["squad"] == category]
+
+
 # 1. Pull the complete public Bellarmine XC season index.
 r = post(
     urljoin(BASE, "phpajax/showSeasons.php"),
@@ -111,11 +147,11 @@ for node in soup.find_all(["h2", "tr"]):
         "year": current_year,
         "date": f"{date_text}/{str(current_year)[2:]}",
         "event": event_name,
+        "race": canonical_race_name(event_name),
         "course": course,
         "eventNum": int(event_num),
     })
 
-# Deduplicate repeated event IDs if the source ever repeats one.
 unique = {}
 for e in events:
     unique[e["eventNum"]] = e
@@ -165,7 +201,6 @@ for idx, event in enumerate(events, 1):
         if not runner_id:
             continue
         runner = runner_link.get_text(" ", strip=True)
-        # XCStats' Bellarmine individual table uses "Last, First"; display "First Last".
         if "," in runner:
             last, first = [part.strip() for part in runner.split(",", 1)]
             runner = f"{first} {last}".strip()
@@ -188,6 +223,7 @@ for idx, event in enumerate(events, 1):
             "seconds": sec,
             "distance": dist,
             "course": event["course"],
+            "race": event["race"],
             "event": event["event"],
             "date": event["date"],
             "year": event["year"],
@@ -201,26 +237,25 @@ for idx, event in enumerate(events, 1):
 
 print(f"Parsed {len(performances)} Bellarmine performances; failures={len(failed_events)}")
 
-# 3. Rank best unique runner performance by course + distance and category.
-# Freshman/Sophomore are class-year records based on grade at race, regardless of squad.
-# JV/Varsity remain race-division records based on the XCStats Squad field.
+# 3. Rank by race name + exact course + distance. This keeps, for example,
+# Baylands Invitational records separate from WCAL 2 records at Baylands Park.
 by_config = defaultdict(list)
 for p in performances:
-    by_config[(p["course"], p["distance"])].append(p)
+    by_config[(p["race"], p["course"], p["distance"])].append(p)
 
-categories = ["Overall", "Freshman", "Sophomore", "JV", "Varsity"]
 configs = []
-for (course, distance), rows in sorted(by_config.items(), key=lambda kv: (kv[0][0].lower(), float(kv[0][1]) if re.fullmatch(r"\d+(?:\.\d+)?", kv[0][1]) else 999)):
+for (race, course, distance), rows in sorted(
+    by_config.items(),
+    key=lambda kv: (
+        kv[0][0].lower(),
+        kv[0][1].lower(),
+        float(kv[0][2]) if re.fullmatch(r"\d+(?:\.\d+)?", kv[0][2]) else 999,
+    ),
+):
+    categories = categories_for_race(race)
     lists = {}
     for category in categories:
-        if category == "Overall":
-            eligible = rows
-        elif category == "Freshman":
-            eligible = [p for p in rows if p["grade"] == "Fr"]
-        elif category == "Sophomore":
-            eligible = [p for p in rows if p["grade"] == "So"]
-        else:
-            eligible = [p for p in rows if p["squad"] == category]
+        eligible = eligible_for_category(rows, category)
         best = {}
         for p in eligible:
             existing = best.get(p["runnerId"])
@@ -243,8 +278,10 @@ for (course, distance), rows in sorted(by_config.items(), key=lambda kv: (kv[0][
             for i, p in enumerate(ranked)
         ]
     configs.append({
+        "race": race,
         "course": course,
         "distanceMiles": distance,
+        "categories": categories,
         "performanceCount": len(rows),
         "uniqueRunnerCount": len({p["runnerId"] for p in rows}),
         "records": lists,
@@ -261,12 +298,12 @@ payload = {
         "failedEventCount": len(failed_events),
         "failedEvents": failed_events,
     },
-    "methodology": "Top 10 uses each runner's single fastest verified Bellarmine XCStats performance for the exact XCStats course name and race distance. Freshman and Sophomore lists use grade at race (Fr/So) regardless of squad, so class records include runners competing up in JV or Varsity. JV and Varsity lists use the XCStats race Squad field.",
+    "methodology": "Top 10 lists are grouped by race name, exact XCStats course name, and race distance, so different meets at the same venue are not mixed. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational is grade-raced and uses Freshman, Sophomore, Junior, and Senior lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
     "courses": configs,
 }
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
-print(f"Wrote {OUT}: {len(configs)} course-distance configurations")
+print(f"Wrote {OUT}: {len(configs)} race-course-distance configurations")
 for c in configs:
     counts = ", ".join(f"{k}={len(v)}" for k, v in c["records"].items())
-    print(f"CONFIG {c['course']} {c['distanceMiles']} mi :: {counts}")
+    print(f"CONFIG {c['race']} :: {c['course']} {c['distanceMiles']} mi :: {counts}")
