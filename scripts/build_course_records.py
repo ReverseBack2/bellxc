@@ -90,6 +90,8 @@ def canonical_race_name(name):
         return "Baylands Invitational"
     if re.fullmatch(r"Crystal Springs (?:Invitational|Invite)", value, re.I):
         return "Crystal Springs Invitational"
+    if re.match(r"^Serra\s+Invitational\b", value, re.I):
+        return "Serra Invitational"
     if re.fullmatch(r"WCAL\s*(?:#\s*)?(?:3|III|Finals?)", value, re.I):
         return "WCAL Finals"
 
@@ -327,7 +329,7 @@ payload = {
         "failedEventCount": len(failed_events),
         "failedEvents": failed_events,
     },
-    "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and normalized race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. WCAL 3 and WCAL Finals are treated as the same meet. Equivalent 5K and 3.1-mile labels are grouped together. Each course configuration includes the years it appears in the XCStats archive. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
+    "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and normalized race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. WCAL 3 and WCAL Finals are treated as the same meet. Serra Invitational naming variants are treated as the same meet. Equivalent 5K and 3.1-mile labels are grouped together. Each course configuration includes the years it appears in the XCStats archive. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
     "courses": configs,
 }
 OUT.parent.mkdir(parents=True, exist_ok=True)
