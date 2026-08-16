@@ -78,7 +78,7 @@
       }
     ]
   },
-  "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and normalized race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. WCAL 3 and WCAL Finals are treated as the same meet. Serra Invitational naming variants are treated as the same meet. Equivalent 5K and 3.1-mile labels are grouped together. Each course configuration includes the years it appears in the XCStats archive. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
+  "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and normalized race distance, so different meets at the same venue are not mixed while known naming variants of the same meet are merged. WCAL 3 and WCAL Finals are treated as the same meet. Serra Invitational and Crystal Springs Invitational/Invite are treated as the same meet under Serra/Crystal Springs Invitational. Equivalent 5K and 3.1-mile labels are grouped together. Each course configuration includes the years it appears in the XCStats archive. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
   "courses": [
     {
       "race": "Artichoke Invitational",
@@ -6148,652 +6148,6 @@
             "event": "Cowchip Classic",
             "eventNum": 7552,
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=7552&gender=u"
-          }
-        ]
-      }
-    },
-    {
-      "race": "Crystal Springs Invitational",
-      "course": "Crystal Springs",
-      "distanceMiles": "2.95",
-      "firstYear": 1986,
-      "lastYear": 2025,
-      "yearsRun": [
-        1986,
-        1993,
-        1999,
-        2002,
-        2003,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "categories": [
-        "Overall",
-        "Freshman",
-        "Sophomore",
-        "JV",
-        "Varsity"
-      ],
-      "performanceCount": 1408,
-      "uniqueRunnerCount": 947,
-      "records": {
-        "Overall": [
-          {
-            "rank": 1,
-            "runner": "Neil Davis",
-            "runnerId": 85490,
-            "gradYear": 2001,
-            "gradeAtRace": "Jr",
-            "time": "15:10",
-            "date": "10/9/99",
-            "event": "Crystal Springs Invite",
-            "eventNum": 6684,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=6684&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Torre Pena",
-            "runnerId": 85545,
-            "gradYear": 1988,
-            "gradeAtRace": "Jr",
-            "time": "15:12.7",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          },
-          {
-            "rank": 3,
-            "runner": "Rob Meinhardt",
-            "runnerId": 217937,
-            "gradYear": 1987,
-            "gradeAtRace": "Sr",
-            "time": "15:13.6",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          },
-          {
-            "rank": 4,
-            "runner": "Scott Robinson",
-            "runnerId": 217938,
-            "gradYear": 1987,
-            "gradeAtRace": "Sr",
-            "time": "15:22.2",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          },
-          {
-            "rank": 5,
-            "runner": "Tom Becker",
-            "runnerId": 85525,
-            "gradYear": 1995,
-            "gradeAtRace": "Jr",
-            "time": "15:35",
-            "date": "10/9/93",
-            "event": "Crystal Springs Invite",
-            "eventNum": 890,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=890&gender=u"
-          },
-          {
-            "rank": 6,
-            "runner": "Jack Bordoni",
-            "runnerId": 3372,
-            "gradYear": 2012,
-            "gradeAtRace": "Jr",
-            "time": "15:40",
-            "date": "10/9/10",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1622,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1622&gender=u"
-          },
-          {
-            "rank": 7,
-            "runner": "Kyle Rae",
-            "runnerId": 3247,
-            "gradYear": 2011,
-            "gradeAtRace": "Jr",
-            "time": "15:41",
-            "date": "10/10/09",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1059,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
-          },
-          {
-            "rank": 8,
-            "runner": "Todd Dando",
-            "runnerId": 85524,
-            "gradYear": 1994,
-            "gradeAtRace": "Sr",
-            "time": "15:41",
-            "date": "10/9/93",
-            "event": "Crystal Springs Invite",
-            "eventNum": 890,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=890&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Arnold Song",
-            "runnerId": 85496,
-            "gradYear": 1995,
-            "gradeAtRace": "Jr",
-            "time": "15:45",
-            "date": "10/9/93",
-            "event": "Crystal Springs Invite",
-            "eventNum": 890,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=890&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Andy Zoldak",
-            "runnerId": 217935,
-            "gradYear": 1988,
-            "gradeAtRace": "Jr",
-            "time": "15:48.7",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          }
-        ],
-        "Freshman": [
-          {
-            "rank": 1,
-            "runner": "Ryan Jensen",
-            "runnerId": 85500,
-            "gradYear": 2003,
-            "gradeAtRace": "Fr",
-            "time": "16:39",
-            "date": "10/9/99",
-            "event": "Crystal Springs Invite",
-            "eventNum": 6684,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=6684&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Benjamin Kelly",
-            "runnerId": 3142,
-            "gradYear": 2009,
-            "gradeAtRace": "Fr",
-            "time": "16:44",
-            "date": "10/8/05",
-            "event": "Crystal Springs Invite",
-            "eventNum": 506,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=506&gender=u"
-          },
-          {
-            "rank": 3,
-            "runner": "Kyle Rae",
-            "runnerId": 3247,
-            "gradYear": 2011,
-            "gradeAtRace": "Fr",
-            "time": "17:07",
-            "date": "10/13/07",
-            "event": "Crystal Springs Invite",
-            "eventNum": 298,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=298&gender=u"
-          },
-          {
-            "rank": 4,
-            "runner": "Charles DeAnda",
-            "runnerId": 8696,
-            "gradYear": 2013,
-            "gradeAtRace": "Fr",
-            "time": "17:08",
-            "date": "10/10/09",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1059,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
-          },
-          {
-            "rank": 5,
-            "runner": "Jack Bordoni",
-            "runnerId": 3372,
-            "gradYear": 2012,
-            "gradeAtRace": "Fr",
-            "time": "17:10",
-            "date": "10/11/08",
-            "event": "Crystal Springs Invite",
-            "eventNum": 474,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=474&gender=u"
-          },
-          {
-            "rank": 6,
-            "runner": "Liam Wallace",
-            "runnerId": 375177,
-            "gradYear": 2029,
-            "gradeAtRace": "Fr",
-            "time": "17:14.7",
-            "date": "10/11/25",
-            "event": "Crystal Springs Invite",
-            "eventNum": 13532,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13532&gender=u"
-          },
-          {
-            "rank": 7,
-            "runner": "Andrew Wulf",
-            "runnerId": 85495,
-            "gradYear": 1997,
-            "gradeAtRace": "Fr",
-            "time": "17:16",
-            "date": "10/9/93",
-            "event": "Crystal Springs Invite",
-            "eventNum": 890,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=890&gender=u"
-          },
-          {
-            "rank": 8,
-            "runner": "Nick Young",
-            "runnerId": 8724,
-            "gradYear": 2013,
-            "gradeAtRace": "Fr",
-            "time": "17:35",
-            "date": "10/10/09",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1059,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Joseph Diaz",
-            "runnerId": 17023,
-            "gradYear": 2014,
-            "gradeAtRace": "Fr",
-            "time": "17:36",
-            "date": "10/9/10",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1622,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1622&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Escamilla",
-            "runnerId": 217886,
-            "gradYear": 1990,
-            "gradeAtRace": "Fr",
-            "time": "17:50",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          }
-        ],
-        "Sophomore": [
-          {
-            "rank": 1,
-            "runner": "Wayne Hopp",
-            "runnerId": 85503,
-            "gradYear": 2002,
-            "gradeAtRace": "So",
-            "time": "15:59",
-            "date": "10/9/99",
-            "event": "Crystal Springs Invite",
-            "eventNum": 6684,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=6684&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Adrian Webb",
-            "runnerId": 85491,
-            "gradYear": 1996,
-            "gradeAtRace": "So",
-            "time": "16:05",
-            "date": "10/9/93",
-            "event": "Crystal Springs Invite",
-            "eventNum": 890,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=890&gender=u"
-          },
-          {
-            "rank": 3,
-            "runner": "Adrian Hinojosa",
-            "runnerId": 3387,
-            "gradYear": 2012,
-            "gradeAtRace": "So",
-            "time": "16:07",
-            "date": "10/10/09",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1059,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
-          },
-          {
-            "rank": 4,
-            "runner": "Jack Bordoni",
-            "runnerId": 3372,
-            "gradYear": 2012,
-            "gradeAtRace": "So",
-            "time": "16:09",
-            "date": "10/10/09",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1059,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
-          },
-          {
-            "rank": 5,
-            "runner": "Dalton Guthrie",
-            "runnerId": 3162,
-            "gradYear": 2010,
-            "gradeAtRace": "So",
-            "time": "16:17",
-            "date": "10/13/07",
-            "event": "Crystal Springs Invite",
-            "eventNum": 298,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=298&gender=u"
-          },
-          {
-            "rank": 6,
-            "runner": "Esteban Valencia",
-            "runnerId": 3417,
-            "gradYear": 2012,
-            "gradeAtRace": "So",
-            "time": "16:19",
-            "date": "10/10/09",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1059,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
-          },
-          {
-            "rank": 7,
-            "runner": "Benjamin Kelly",
-            "runnerId": 3142,
-            "gradYear": 2009,
-            "gradeAtRace": "So",
-            "time": "16:26",
-            "date": "10/14/06",
-            "event": "Crystal Springs Invite",
-            "eventNum": 47,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=47&gender=u"
-          },
-          {
-            "rank": 8,
-            "runner": "Ed Engler",
-            "runnerId": 85547,
-            "gradYear": 1989,
-            "gradeAtRace": "So",
-            "time": "16:34",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Tony Ferrari",
-            "runnerId": 3261,
-            "gradYear": 2011,
-            "gradeAtRace": "So",
-            "time": "16:34",
-            "date": "10/11/08",
-            "event": "Crystal Springs Invite",
-            "eventNum": 474,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=474&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Peter Fisher",
-            "runnerId": 85542,
-            "gradYear": 1989,
-            "gradeAtRace": "So",
-            "time": "16:36",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          }
-        ],
-        "JV": [
-          {
-            "rank": 1,
-            "runner": "Jose Sandoval",
-            "runnerId": 3400,
-            "gradYear": 2012,
-            "gradeAtRace": "Jr",
-            "time": "16:15",
-            "date": "10/9/10",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1622,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1622&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Kyle Hillebrecht",
-            "runnerId": 3190,
-            "gradYear": 2008,
-            "gradeAtRace": "Sr",
-            "time": "16:35",
-            "date": "10/13/07",
-            "event": "Crystal Springs Invite",
-            "eventNum": 298,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=298&gender=u"
-          },
-          {
-            "rank": 3,
-            "runner": "Alex Jeongco",
-            "runnerId": 3222,
-            "gradYear": 2011,
-            "gradeAtRace": "Jr",
-            "time": "16:38",
-            "date": "10/10/09",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1059,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
-          },
-          {
-            "rank": 4,
-            "runner": "Dalton Guthrie",
-            "runnerId": 3162,
-            "gradYear": 2010,
-            "gradeAtRace": "Sr",
-            "time": "16:39",
-            "date": "10/10/09",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1059,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
-          },
-          {
-            "rank": 5,
-            "runner": "Matt Abely",
-            "runnerId": 3193,
-            "gradYear": 2009,
-            "gradeAtRace": "Sr",
-            "time": "16:40",
-            "date": "10/11/08",
-            "event": "Crystal Springs Invite",
-            "eventNum": 474,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=474&gender=u"
-          },
-          {
-            "rank": 6,
-            "runner": "Quiche Rubalcava",
-            "runnerId": 217920,
-            "gradYear": 1988,
-            "gradeAtRace": "Jr",
-            "time": "16:50",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          },
-          {
-            "rank": 7,
-            "runner": "Nicholas Mantovani",
-            "runnerId": 3401,
-            "gradYear": 2012,
-            "gradeAtRace": "Jr",
-            "time": "16:53",
-            "date": "10/9/10",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1622,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1622&gender=u"
-          },
-          {
-            "rank": 8,
-            "runner": "Bradley Afroilan",
-            "runnerId": 3392,
-            "gradYear": 2012,
-            "gradeAtRace": "Jr",
-            "time": "16:59",
-            "date": "10/9/10",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1622,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1622&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Murphy",
-            "runnerId": 217905,
-            "gradYear": null,
-            "gradeAtRace": "",
-            "time": "17:00",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Matt Richards",
-            "runnerId": 3195,
-            "gradYear": 2010,
-            "gradeAtRace": "Sr",
-            "time": "17:01",
-            "date": "10/10/09",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1059,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
-          }
-        ],
-        "Varsity": [
-          {
-            "rank": 1,
-            "runner": "Neil Davis",
-            "runnerId": 85490,
-            "gradYear": 2001,
-            "gradeAtRace": "Jr",
-            "time": "15:10",
-            "date": "10/9/99",
-            "event": "Crystal Springs Invite",
-            "eventNum": 6684,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=6684&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Torre Pena",
-            "runnerId": 85545,
-            "gradYear": 1988,
-            "gradeAtRace": "Jr",
-            "time": "15:12.7",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          },
-          {
-            "rank": 3,
-            "runner": "Rob Meinhardt",
-            "runnerId": 217937,
-            "gradYear": 1987,
-            "gradeAtRace": "Sr",
-            "time": "15:13.6",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          },
-          {
-            "rank": 4,
-            "runner": "Scott Robinson",
-            "runnerId": 217938,
-            "gradYear": 1987,
-            "gradeAtRace": "Sr",
-            "time": "15:22.2",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
-          },
-          {
-            "rank": 5,
-            "runner": "Tom Becker",
-            "runnerId": 85525,
-            "gradYear": 1995,
-            "gradeAtRace": "Jr",
-            "time": "15:35",
-            "date": "10/9/93",
-            "event": "Crystal Springs Invite",
-            "eventNum": 890,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=890&gender=u"
-          },
-          {
-            "rank": 6,
-            "runner": "Jack Bordoni",
-            "runnerId": 3372,
-            "gradYear": 2012,
-            "gradeAtRace": "Jr",
-            "time": "15:40",
-            "date": "10/9/10",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1622,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1622&gender=u"
-          },
-          {
-            "rank": 7,
-            "runner": "Kyle Rae",
-            "runnerId": 3247,
-            "gradYear": 2011,
-            "gradeAtRace": "Jr",
-            "time": "15:41",
-            "date": "10/10/09",
-            "event": "Crystal Springs Invite",
-            "eventNum": 1059,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
-          },
-          {
-            "rank": 8,
-            "runner": "Todd Dando",
-            "runnerId": 85524,
-            "gradYear": 1994,
-            "gradeAtRace": "Sr",
-            "time": "15:41",
-            "date": "10/9/93",
-            "event": "Crystal Springs Invite",
-            "eventNum": 890,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=890&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Arnold Song",
-            "runnerId": 85496,
-            "gradYear": 1995,
-            "gradeAtRace": "Jr",
-            "time": "15:45",
-            "date": "10/9/93",
-            "event": "Crystal Springs Invite",
-            "eventNum": 890,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=890&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Andy Zoldak",
-            "runnerId": 217935,
-            "gradYear": 1988,
-            "gradeAtRace": "Jr",
-            "time": "15:48.7",
-            "date": "10/11/86",
-            "event": "Crystal Springs Invite",
-            "eventNum": 5401,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
           }
         ]
       }
@@ -19733,15 +19087,26 @@
       }
     },
     {
-      "race": "Serra Invitational",
+      "race": "Serra/Crystal Springs Invitational",
       "course": "Crystal Springs",
       "distanceMiles": "2.95",
-      "firstYear": 1998,
-      "lastYear": 2019,
+      "firstYear": 1986,
+      "lastYear": 2025,
       "yearsRun": [
+        1986,
+        1993,
         1998,
+        1999,
         2000,
         2001,
+        2002,
+        2003,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
         2012,
         2013,
         2014,
@@ -19749,7 +19114,12 @@
         2016,
         2017,
         2018,
-        2019
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
       ],
       "categories": [
         "Overall",
@@ -19758,8 +19128,8 @@
         "JV",
         "Varsity"
       ],
-      "performanceCount": 1117,
-      "uniqueRunnerCount": 656,
+      "performanceCount": 2525,
+      "uniqueRunnerCount": 1476,
       "records": {
         "Overall": [
           {
@@ -19812,6 +19182,30 @@
           },
           {
             "rank": 5,
+            "runner": "Torre Pena",
+            "runnerId": 85545,
+            "gradYear": 1988,
+            "gradeAtRace": "Jr",
+            "time": "15:12.7",
+            "date": "10/11/86",
+            "event": "Crystal Springs Invite",
+            "eventNum": 5401,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
+          },
+          {
+            "rank": 6,
+            "runner": "Rob Meinhardt",
+            "runnerId": 217937,
+            "gradYear": 1987,
+            "gradeAtRace": "Sr",
+            "time": "15:13.6",
+            "date": "10/11/86",
+            "event": "Crystal Springs Invite",
+            "eventNum": 5401,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
+          },
+          {
+            "rank": 7,
             "runner": "Alex Scales",
             "runnerId": 80582,
             "gradYear": 2018,
@@ -19823,7 +19217,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5582&gender=u"
           },
           {
-            "rank": 6,
+            "rank": 8,
             "runner": "Charles DeAnda",
             "runnerId": 8696,
             "gradYear": 2013,
@@ -19835,7 +19229,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=2746&gender=u"
           },
           {
-            "rank": 7,
+            "rank": 9,
             "runner": "Raymond Meijer",
             "runnerId": 8727,
             "gradYear": 2013,
@@ -19847,40 +19241,16 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=2746&gender=u"
           },
           {
-            "rank": 8,
-            "runner": "Galen Topper",
-            "runnerId": 152075,
-            "gradYear": 2021,
-            "gradeAtRace": "Jr",
-            "time": "15:31.9",
-            "date": "10/12/19",
-            "event": "Serra Invitational",
-            "eventNum": 8282,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=8282&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Alex Sasser",
-            "runnerId": 30481,
-            "gradYear": 2015,
-            "gradeAtRace": "Sr",
-            "time": "15:32",
-            "date": "10/11/14",
-            "event": "Serra Invitational",
-            "eventNum": 3830,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3830&gender=u"
-          },
-          {
             "rank": 10,
-            "runner": "Ross D'orfani",
-            "runnerId": 102823,
-            "gradYear": 2019,
+            "runner": "Scott Robinson",
+            "runnerId": 217938,
+            "gradYear": 1987,
             "gradeAtRace": "Sr",
-            "time": "15:34.1",
-            "date": "10/6/18",
-            "event": "Serra Invitational",
-            "eventNum": 7366,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=7366&gender=u"
+            "time": "15:22.2",
+            "date": "10/11/86",
+            "event": "Crystal Springs Invite",
+            "eventNum": 5401,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
           }
         ],
         "Freshman": [
@@ -19922,6 +19292,18 @@
           },
           {
             "rank": 4,
+            "runner": "Ryan Jensen",
+            "runnerId": 85500,
+            "gradYear": 2003,
+            "gradeAtRace": "Fr",
+            "time": "16:39",
+            "date": "10/9/99",
+            "event": "Crystal Springs Invite",
+            "eventNum": 6684,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=6684&gender=u"
+          },
+          {
+            "rank": 5,
             "runner": "Meika Beaudoin-Rousseau",
             "runnerId": 105331,
             "gradYear": 2018,
@@ -19933,7 +19315,19 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3830&gender=u"
           },
           {
-            "rank": 5,
+            "rank": 6,
+            "runner": "Benjamin Kelly",
+            "runnerId": 3142,
+            "gradYear": 2009,
+            "gradeAtRace": "Fr",
+            "time": "16:44",
+            "date": "10/8/05",
+            "event": "Crystal Springs Invite",
+            "eventNum": 506,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=506&gender=u"
+          },
+          {
+            "rank": 7,
             "runner": "Nolan Topper",
             "runnerId": 152081,
             "gradYear": 2021,
@@ -19945,7 +19339,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=6555&gender=u"
           },
           {
-            "rank": 6,
+            "rank": 8,
             "runner": "Clem Welsh",
             "runnerId": 152096,
             "gradYear": 2021,
@@ -19957,7 +19351,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=6555&gender=u"
           },
           {
-            "rank": 7,
+            "rank": 9,
             "runner": "Christian Yarwood",
             "runnerId": 152074,
             "gradYear": 2021,
@@ -19969,7 +19363,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=6555&gender=u"
           },
           {
-            "rank": 8,
+            "rank": 10,
             "runner": "Tristan Lalonde",
             "runnerId": 173764,
             "gradYear": 2022,
@@ -19979,30 +19373,6 @@
             "event": "Serra Invitational",
             "eventNum": 7366,
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=7366&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Matt Bordoni",
-            "runnerId": 184441,
-            "gradYear": 2004,
-            "gradeAtRace": "Fr",
-            "time": "17:04",
-            "date": "10/14/00",
-            "event": "Serra Invitational",
-            "eventNum": 453,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=453&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Neerav Gade",
-            "runnerId": 80608,
-            "gradYear": 2018,
-            "gradeAtRace": "Fr",
-            "time": "17:14",
-            "date": "10/11/14",
-            "event": "Serra Invitational",
-            "eventNum": 3830,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3830&gender=u"
           }
         ],
         "Sophomore": [
@@ -20080,6 +19450,18 @@
           },
           {
             "rank": 7,
+            "runner": "Wayne Hopp",
+            "runnerId": 85503,
+            "gradYear": 2002,
+            "gradeAtRace": "So",
+            "time": "15:59",
+            "date": "10/9/99",
+            "event": "Crystal Springs Invite",
+            "eventNum": 6684,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=6684&gender=u"
+          },
+          {
+            "rank": 8,
             "runner": "Clem Welsh",
             "runnerId": 152096,
             "gradYear": 2021,
@@ -20091,7 +19473,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=7366&gender=u"
           },
           {
-            "rank": 8,
+            "rank": 9,
             "runner": "Miles Meijer",
             "runnerId": 29460,
             "gradYear": 2015,
@@ -20103,7 +19485,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=2746&gender=u"
           },
           {
-            "rank": 9,
+            "rank": 10,
             "runner": "Alex Scales",
             "runnerId": 80582,
             "gradYear": 2018,
@@ -20113,23 +19495,23 @@
             "event": "Serra Invitational",
             "eventNum": 4578,
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=4578&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Galen Topper",
-            "runnerId": 152075,
-            "gradYear": 2021,
-            "gradeAtRace": "So",
-            "time": "16:01.7",
-            "date": "10/6/18",
-            "event": "Serra Invitational",
-            "eventNum": 7366,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=7366&gender=u"
           }
         ],
         "JV": [
           {
             "rank": 1,
+            "runner": "Jose Sandoval",
+            "runnerId": 3400,
+            "gradYear": 2012,
+            "gradeAtRace": "Jr",
+            "time": "16:15",
+            "date": "10/9/10",
+            "event": "Crystal Springs Invite",
+            "eventNum": 1622,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1622&gender=u"
+          },
+          {
+            "rank": 2,
             "runner": "Ryan Burd",
             "runnerId": 33737,
             "gradYear": 2015,
@@ -20141,7 +19523,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3339&gender=u"
           },
           {
-            "rank": 2,
+            "rank": 3,
             "runner": "Tyler Lazar",
             "runnerId": 17038,
             "gradYear": 2014,
@@ -20153,7 +19535,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3339&gender=u"
           },
           {
-            "rank": 3,
+            "rank": 4,
             "runner": "Andrew Blankley",
             "runnerId": 17010,
             "gradYear": 2014,
@@ -20165,7 +19547,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=2746&gender=u"
           },
           {
-            "rank": 4,
+            "rank": 5,
             "runner": "Isaac Madrid",
             "runnerId": 17019,
             "gradYear": 2014,
@@ -20177,7 +19559,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=2746&gender=u"
           },
           {
-            "rank": 5,
+            "rank": 6,
             "runner": "Daniel Gurza",
             "runnerId": 46323,
             "gradYear": 2016,
@@ -20189,7 +19571,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=4578&gender=u"
           },
           {
-            "rank": 6,
+            "rank": 7,
             "runner": "Josh Pleva",
             "runnerId": 17024,
             "gradYear": 2014,
@@ -20201,52 +19583,40 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=2746&gender=u"
           },
           {
-            "rank": 7,
-            "runner": "Chris Sedayao",
-            "runnerId": 60922,
-            "gradYear": 2017,
-            "gradeAtRace": "Jr",
-            "time": "16:40.5",
-            "date": "10/10/15",
-            "event": "Serra Invitational",
-            "eventNum": 4578,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=4578&gender=u"
-          },
-          {
             "rank": 8,
-            "runner": "Bryan Heng",
-            "runnerId": 32166,
-            "gradYear": 2015,
-            "gradeAtRace": "Jr",
-            "time": "16:43",
-            "date": "10/12/13",
-            "event": "Serra Invitational",
-            "eventNum": 3339,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3339&gender=u"
+            "runner": "Kyle Hillebrecht",
+            "runnerId": 3190,
+            "gradYear": 2008,
+            "gradeAtRace": "Sr",
+            "time": "16:35",
+            "date": "10/13/07",
+            "event": "Crystal Springs Invite",
+            "eventNum": 298,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=298&gender=u"
           },
           {
             "rank": 9,
-            "runner": "James Cuff-alvarado",
-            "runnerId": 128845,
-            "gradYear": 2020,
+            "runner": "Alex Jeongco",
+            "runnerId": 3222,
+            "gradYear": 2011,
             "gradeAtRace": "Jr",
-            "time": "16:46.6",
-            "date": "10/6/18",
-            "event": "Serra Invitational",
-            "eventNum": 7366,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=7366&gender=u"
+            "time": "16:38",
+            "date": "10/10/09",
+            "event": "Crystal Springs Invite",
+            "eventNum": 1059,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
           },
           {
             "rank": 10,
-            "runner": "Grant Cornia",
-            "runnerId": 85499,
-            "gradYear": 2002,
-            "gradeAtRace": "Jr",
-            "time": "16:47",
-            "date": "10/14/00",
-            "event": "Serra Invitational",
-            "eventNum": 453,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=453&gender=u"
+            "runner": "Dalton Guthrie",
+            "runnerId": 3162,
+            "gradYear": 2010,
+            "gradeAtRace": "Sr",
+            "time": "16:39",
+            "date": "10/10/09",
+            "event": "Crystal Springs Invite",
+            "eventNum": 1059,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=1059&gender=u"
           }
         ],
         "Varsity": [
@@ -20300,6 +19670,30 @@
           },
           {
             "rank": 5,
+            "runner": "Torre Pena",
+            "runnerId": 85545,
+            "gradYear": 1988,
+            "gradeAtRace": "Jr",
+            "time": "15:12.7",
+            "date": "10/11/86",
+            "event": "Crystal Springs Invite",
+            "eventNum": 5401,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
+          },
+          {
+            "rank": 6,
+            "runner": "Rob Meinhardt",
+            "runnerId": 217937,
+            "gradYear": 1987,
+            "gradeAtRace": "Sr",
+            "time": "15:13.6",
+            "date": "10/11/86",
+            "event": "Crystal Springs Invite",
+            "eventNum": 5401,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
+          },
+          {
+            "rank": 7,
             "runner": "Alex Scales",
             "runnerId": 80582,
             "gradYear": 2018,
@@ -20311,7 +19705,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5582&gender=u"
           },
           {
-            "rank": 6,
+            "rank": 8,
             "runner": "Charles DeAnda",
             "runnerId": 8696,
             "gradYear": 2013,
@@ -20323,7 +19717,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=2746&gender=u"
           },
           {
-            "rank": 7,
+            "rank": 9,
             "runner": "Raymond Meijer",
             "runnerId": 8727,
             "gradYear": 2013,
@@ -20335,40 +19729,16 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=2746&gender=u"
           },
           {
-            "rank": 8,
-            "runner": "Galen Topper",
-            "runnerId": 152075,
-            "gradYear": 2021,
-            "gradeAtRace": "Jr",
-            "time": "15:31.9",
-            "date": "10/12/19",
-            "event": "Serra Invitational",
-            "eventNum": 8282,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=8282&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Alex Sasser",
-            "runnerId": 30481,
-            "gradYear": 2015,
-            "gradeAtRace": "Sr",
-            "time": "15:32",
-            "date": "10/11/14",
-            "event": "Serra Invitational",
-            "eventNum": 3830,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3830&gender=u"
-          },
-          {
             "rank": 10,
-            "runner": "Ross D'orfani",
-            "runnerId": 102823,
-            "gradYear": 2019,
+            "runner": "Scott Robinson",
+            "runnerId": 217938,
+            "gradYear": 1987,
             "gradeAtRace": "Sr",
-            "time": "15:34.1",
-            "date": "10/6/18",
-            "event": "Serra Invitational",
-            "eventNum": 7366,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=7366&gender=u"
+            "time": "15:22.2",
+            "date": "10/11/86",
+            "event": "Crystal Springs Invite",
+            "eventNum": 5401,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5401&gender=u"
           }
         ]
       }
