@@ -166,7 +166,7 @@ export function CourseRecordsPage() {
       <aside className={styles.method}>
         <strong>How the lists work</strong>
         <p>
-          Each race appears once below. When the same race has used multiple courses or distances, choose the course configuration from the selector in that race section; the years show when that configuration appears in the XCStats archive. Equivalent 5K and 3.1-mile labels are treated as the same distance. Each runner appears once per list with his fastest qualifying performance for that exact race and course configuration. Class-year lists use grade at race even when an athlete races up. Baylands Invitational, Central Coast Section Finals (CCS), and the State meet use Freshman, Sophomore, Junior, and Senior class lists.
+          League meets are listed first, followed by invitationals ordered by Bellarmine&apos;s most recent participation. Each race appears once below. When the same race has used multiple courses or distances, choose the course configuration from the selector in that race section; the years show when that configuration appears in the XCStats archive. Equivalent 5K and 3.1-mile labels are treated as the same distance. Each runner appears once per list with his fastest qualifying performance for that exact race and course configuration. Class-year lists use grade at race even when an athlete races up. Baylands Invitational, Central Coast Section Finals (CCS), and the State meet use Freshman, Sophomore, Junior, and Senior class lists.
         </p>
       </aside>
 
