@@ -60,7 +60,7 @@ export function CourseRecordsPage() {
       <aside className={styles.method}>
         <strong>How the lists work</strong>
         <p>
-          Each runner appears once per list with his fastest recorded performance on that exact course configuration. Division lists use the race squad recorded by XCStats—Freshman, Sophomore, JV, or Varsity—not simply the runner&apos;s grade. Different course names or distances are kept separate.
+          Each runner appears once per list with his fastest recorded performance on that exact course configuration. Freshman and Sophomore lists are based on the runner&apos;s grade at the time of the race, so a freshman or sophomore still receives class-record credit even when racing JV or Varsity. JV and Varsity lists use the race squad recorded by XCStats. Different course names or distances are kept separate.
         </p>
       </aside>
 
@@ -130,7 +130,7 @@ export function CourseRecordsPage() {
                         </table>
                       </div>
                     ) : (
-                      <p className={styles.empty}>No verified performances for this race division in the XCStats archive.</p>
+                      <p className={styles.empty}>No verified performances for this category in the XCStats archive.</p>
                     )}
                   </details>
                 );
