@@ -78,7 +78,7 @@
       }
     ]
   },
-  "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and normalized race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. Equivalent 5K and 3.1-mile labels are grouped together. Each course configuration includes the years it appears in the XCStats archive. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
+  "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and normalized race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. WCAL 3 and WCAL Finals are treated as the same meet. Equivalent 5K and 3.1-mile labels are grouped together. Each course configuration includes the years it appears in the XCStats archive. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
   "courses": [
     {
       "race": "Artichoke Invitational",
@@ -26973,646 +26973,11 @@
       }
     },
     {
-      "race": "WCAL 3",
-      "course": "Crystal Springs",
-      "distanceMiles": "2.95",
-      "firstYear": 2021,
-      "lastYear": 2025,
-      "yearsRun": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "categories": [
-        "Overall",
-        "Freshman",
-        "Sophomore",
-        "JV",
-        "Varsity"
-      ],
-      "performanceCount": 835,
-      "uniqueRunnerCount": 480,
-      "records": {
-        "Overall": [
-          {
-            "rank": 1,
-            "runner": "Stephen Sziebert",
-            "runnerId": 302592,
-            "gradYear": 2026,
-            "gradeAtRace": "Sr",
-            "time": "15:06.15",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Ben Penzel",
-            "runnerId": 314810,
-            "gradYear": 2026,
-            "gradeAtRace": "Sr",
-            "time": "15:22.16",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 3,
-            "runner": "Devansh Shah",
-            "runnerId": 270357,
-            "gradYear": 2025,
-            "gradeAtRace": "Sr",
-            "time": "15:28.13",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 4,
-            "runner": "Ryunosuke Yanashita",
-            "runnerId": 234333,
-            "gradYear": 2022,
-            "gradeAtRace": "Sr",
-            "time": "15:29.9",
-            "date": "11/3/21",
-            "event": "WCAL #3",
-            "eventNum": 10411,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=10411&gender=u"
-          },
-          {
-            "rank": 5,
-            "runner": "Zander Verhoeven",
-            "runnerId": 273465,
-            "gradYear": 2025,
-            "gradeAtRace": "Sr",
-            "time": "15:33.11",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 6,
-            "runner": "Shashank Nandakumar",
-            "runnerId": 332485,
-            "gradYear": 2027,
-            "gradeAtRace": "Jr",
-            "time": "15:40.3",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 7,
-            "runner": "Duncan Burk",
-            "runnerId": 332443,
-            "gradYear": 2027,
-            "gradeAtRace": "Jr",
-            "time": "15:40.58",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 8,
-            "runner": "Shrey Chettiar",
-            "runnerId": 270336,
-            "gradYear": 2025,
-            "gradeAtRace": "Sr",
-            "time": "15:41.21",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "William Burch",
-            "runnerId": 273468,
-            "gradYear": 2025,
-            "gradeAtRace": "Sr",
-            "time": "15:49.8",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Tanish Chettiar",
-            "runnerId": 173761,
-            "gradYear": 2022,
-            "gradeAtRace": "Sr",
-            "time": "16:00.5",
-            "date": "11/3/21",
-            "event": "WCAL #3",
-            "eventNum": 10411,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=10411&gender=u"
-          }
-        ],
-        "Freshman": [
-          {
-            "rank": 1,
-            "runner": "Duncan Burk",
-            "runnerId": 332443,
-            "gradYear": 2027,
-            "gradeAtRace": "Fr",
-            "time": "16:35.6",
-            "date": "11/1/23",
-            "event": "WCAL #3",
-            "eventNum": 12084,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12084&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Dominic Erickson",
-            "runnerId": 375163,
-            "gradYear": 2029,
-            "gradeAtRace": "Fr",
-            "time": "16:40.37",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 3,
-            "runner": "Ben Penzel",
-            "runnerId": 314810,
-            "gradYear": 2026,
-            "gradeAtRace": "Fr",
-            "time": "17:19",
-            "date": "11/2/22",
-            "event": "WCAL #3",
-            "eventNum": 11184,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=11184&gender=u"
-          },
-          {
-            "rank": 4,
-            "runner": "Riaan Agrawal",
-            "runnerId": 375187,
-            "gradYear": 2029,
-            "gradeAtRace": "Fr",
-            "time": "17:49.53",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 5,
-            "runner": "Logan Chavez",
-            "runnerId": 375178,
-            "gradYear": 2029,
-            "gradeAtRace": "Fr",
-            "time": "17:50.64",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 6,
-            "runner": "Timothy Do",
-            "runnerId": 375191,
-            "gradYear": 2029,
-            "gradeAtRace": "Fr",
-            "time": "17:50.98",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 7,
-            "runner": "Kyle Suhendra",
-            "runnerId": 348177,
-            "gradYear": 2028,
-            "gradeAtRace": "Fr",
-            "time": "17:51.4",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 8,
-            "runner": "Logan Connell",
-            "runnerId": 375179,
-            "gradYear": 2029,
-            "gradeAtRace": "Fr",
-            "time": "17:52.79",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Kian Sawaya",
-            "runnerId": 302571,
-            "gradYear": 2026,
-            "gradeAtRace": "Fr",
-            "time": "17:58",
-            "date": "11/2/22",
-            "event": "WCAL #3",
-            "eventNum": 11184,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=11184&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "James Jones",
-            "runnerId": 356042,
-            "gradYear": 2028,
-            "gradeAtRace": "Fr",
-            "time": "18:04.76",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          }
-        ],
-        "Sophomore": [
-          {
-            "rank": 1,
-            "runner": "Duncan Burk",
-            "runnerId": 332443,
-            "gradYear": 2027,
-            "gradeAtRace": "So",
-            "time": "16:12.81",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Kyle Suhendra",
-            "runnerId": 348177,
-            "gradYear": 2028,
-            "gradeAtRace": "So",
-            "time": "16:28.02",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 3,
-            "runner": "Shrey Chettiar",
-            "runnerId": 270336,
-            "gradYear": 2025,
-            "gradeAtRace": "So",
-            "time": "16:34.5",
-            "date": "11/2/22",
-            "event": "WCAL #3",
-            "eventNum": 11184,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=11184&gender=u"
-          },
-          {
-            "rank": 4,
-            "runner": "Devansh Shah",
-            "runnerId": 270357,
-            "gradYear": 2025,
-            "gradeAtRace": "So",
-            "time": "16:40.4",
-            "date": "11/2/22",
-            "event": "WCAL #3",
-            "eventNum": 11184,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=11184&gender=u"
-          },
-          {
-            "rank": 5,
-            "runner": "Ben Penzel",
-            "runnerId": 314810,
-            "gradYear": 2026,
-            "gradeAtRace": "So",
-            "time": "16:51.5",
-            "date": "11/1/23",
-            "event": "WCAL #3",
-            "eventNum": 12084,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12084&gender=u"
-          },
-          {
-            "rank": 6,
-            "runner": "Jude Hammers",
-            "runnerId": 262259,
-            "gradYear": 2024,
-            "gradeAtRace": "So",
-            "time": "17:02",
-            "date": "11/3/21",
-            "event": "WCAL #3",
-            "eventNum": 10411,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=10411&gender=u"
-          },
-          {
-            "rank": 7,
-            "runner": "Ryder Reginelli",
-            "runnerId": 270235,
-            "gradYear": 2025,
-            "gradeAtRace": "So",
-            "time": "17:02.1",
-            "date": "11/2/22",
-            "event": "WCAL #3",
-            "eventNum": 11184,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=11184&gender=u"
-          },
-          {
-            "rank": 8,
-            "runner": "Stephen Sziebert",
-            "runnerId": 302592,
-            "gradYear": 2026,
-            "gradeAtRace": "So",
-            "time": "17:07.3",
-            "date": "11/1/23",
-            "event": "WCAL #3",
-            "eventNum": 12084,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12084&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Tanay Doppalapudi",
-            "runnerId": 262238,
-            "gradYear": 2024,
-            "gradeAtRace": "So",
-            "time": "17:11.6",
-            "date": "11/3/21",
-            "event": "WCAL #3",
-            "eventNum": 10411,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=10411&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Dane Flores",
-            "runnerId": 273470,
-            "gradYear": 2025,
-            "gradeAtRace": "So",
-            "time": "17:12.2",
-            "date": "11/2/22",
-            "event": "WCAL #3",
-            "eventNum": 11184,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=11184&gender=u"
-          }
-        ],
-        "JV": [
-          {
-            "rank": 1,
-            "runner": "Camilo Restrepo",
-            "runnerId": 333993,
-            "gradYear": 2026,
-            "gradeAtRace": "Sr",
-            "time": "16:05.91",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Aiden Baldock",
-            "runnerId": 303723,
-            "gradYear": 2026,
-            "gradeAtRace": "Sr",
-            "time": "16:09.81",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 3,
-            "runner": "Sebastian Salcedo",
-            "runnerId": 332484,
-            "gradYear": 2027,
-            "gradeAtRace": "Jr",
-            "time": "16:22.37",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 4,
-            "runner": "Devansh Shah",
-            "runnerId": 270357,
-            "gradYear": 2025,
-            "gradeAtRace": "Jr",
-            "time": "16:24.6",
-            "date": "11/1/23",
-            "event": "WCAL #3",
-            "eventNum": 12084,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12084&gender=u"
-          },
-          {
-            "rank": 5,
-            "runner": "Jack Frida",
-            "runnerId": 234308,
-            "gradYear": 2023,
-            "gradeAtRace": "Jr",
-            "time": "16:25.3",
-            "date": "11/3/21",
-            "event": "WCAL #3",
-            "eventNum": 10411,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=10411&gender=u"
-          },
-          {
-            "rank": 6,
-            "runner": "Kyle Suhendra",
-            "runnerId": 348177,
-            "gradYear": 2028,
-            "gradeAtRace": "So",
-            "time": "16:28.02",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 7,
-            "runner": "Nico St. Angel",
-            "runnerId": 333992,
-            "gradYear": 2026,
-            "gradeAtRace": "Jr",
-            "time": "16:35.12",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 8,
-            "runner": "Spencer Maffeo",
-            "runnerId": 332486,
-            "gradYear": 2027,
-            "gradeAtRace": "Jr",
-            "time": "16:35.95",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Sonny Lowe",
-            "runnerId": 235406,
-            "gradYear": 2023,
-            "gradeAtRace": "Sr",
-            "time": "16:36.4",
-            "date": "11/2/22",
-            "event": "WCAL #3",
-            "eventNum": 11184,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=11184&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Reed Bodnar-Cohen",
-            "runnerId": 262277,
-            "gradYear": 2024,
-            "gradeAtRace": "Jr",
-            "time": "16:36.5",
-            "date": "11/2/22",
-            "event": "WCAL #3",
-            "eventNum": 11184,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=11184&gender=u"
-          }
-        ],
-        "Varsity": [
-          {
-            "rank": 1,
-            "runner": "Stephen Sziebert",
-            "runnerId": 302592,
-            "gradYear": 2026,
-            "gradeAtRace": "Sr",
-            "time": "15:06.15",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Ben Penzel",
-            "runnerId": 314810,
-            "gradYear": 2026,
-            "gradeAtRace": "Sr",
-            "time": "15:22.16",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 3,
-            "runner": "Devansh Shah",
-            "runnerId": 270357,
-            "gradYear": 2025,
-            "gradeAtRace": "Sr",
-            "time": "15:28.13",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 4,
-            "runner": "Ryunosuke Yanashita",
-            "runnerId": 234333,
-            "gradYear": 2022,
-            "gradeAtRace": "Sr",
-            "time": "15:29.9",
-            "date": "11/3/21",
-            "event": "WCAL #3",
-            "eventNum": 10411,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=10411&gender=u"
-          },
-          {
-            "rank": 5,
-            "runner": "Zander Verhoeven",
-            "runnerId": 273465,
-            "gradYear": 2025,
-            "gradeAtRace": "Sr",
-            "time": "15:33.11",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 6,
-            "runner": "Shashank Nandakumar",
-            "runnerId": 332485,
-            "gradYear": 2027,
-            "gradeAtRace": "Jr",
-            "time": "15:40.3",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 7,
-            "runner": "Duncan Burk",
-            "runnerId": 332443,
-            "gradYear": 2027,
-            "gradeAtRace": "Jr",
-            "time": "15:40.58",
-            "date": "11/5/25",
-            "event": "WCAL #3",
-            "eventNum": 13733,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
-          },
-          {
-            "rank": 8,
-            "runner": "Shrey Chettiar",
-            "runnerId": 270336,
-            "gradYear": 2025,
-            "gradeAtRace": "Sr",
-            "time": "15:41.21",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "William Burch",
-            "runnerId": 273468,
-            "gradYear": 2025,
-            "gradeAtRace": "Sr",
-            "time": "15:49.8",
-            "date": "11/6/24",
-            "event": "WCAL #3",
-            "eventNum": 12790,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12790&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Tanish Chettiar",
-            "runnerId": 173761,
-            "gradYear": 2022,
-            "gradeAtRace": "Sr",
-            "time": "16:00.5",
-            "date": "11/3/21",
-            "event": "WCAL #3",
-            "eventNum": 10411,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=10411&gender=u"
-          }
-        ]
-      }
-    },
-    {
       "race": "WCAL Finals",
       "course": "Crystal Springs",
       "distanceMiles": "2.95",
       "firstYear": 1998,
-      "lastYear": 2019,
+      "lastYear": 2025,
       "yearsRun": [
         1998,
         2000,
@@ -27631,7 +26996,12 @@
         2016,
         2017,
         2018,
-        2019
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
       ],
       "categories": [
         "Overall",
@@ -27640,8 +27010,8 @@
         "JV",
         "Varsity"
       ],
-      "performanceCount": 2276,
-      "uniqueRunnerCount": 1189,
+      "performanceCount": 3111,
+      "uniqueRunnerCount": 1617,
       "records": {
         "Overall": [
           {
@@ -27682,6 +27052,18 @@
           },
           {
             "rank": 4,
+            "runner": "Stephen Sziebert",
+            "runnerId": 302592,
+            "gradYear": 2026,
+            "gradeAtRace": "Sr",
+            "time": "15:06.15",
+            "date": "11/5/25",
+            "event": "WCAL #3",
+            "eventNum": 13733,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
+          },
+          {
+            "rank": 5,
             "runner": "Alex Scales",
             "runnerId": 80582,
             "gradYear": 2018,
@@ -27693,7 +27075,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5580&gender=u"
           },
           {
-            "rank": 5,
+            "rank": 6,
             "runner": "Neil Davis",
             "runnerId": 85490,
             "gradYear": 2001,
@@ -27705,7 +27087,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5255&gender=u"
           },
           {
-            "rank": 6,
+            "rank": 7,
             "runner": "Clem Welsh",
             "runnerId": 152096,
             "gradYear": 2021,
@@ -27717,7 +27099,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=8284&gender=u"
           },
           {
-            "rank": 7,
+            "rank": 8,
             "runner": "Galen Topper",
             "runnerId": 152075,
             "gradYear": 2021,
@@ -27729,7 +27111,19 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=8284&gender=u"
           },
           {
-            "rank": 8,
+            "rank": 9,
+            "runner": "Ben Penzel",
+            "runnerId": 314810,
+            "gradYear": 2026,
+            "gradeAtRace": "Sr",
+            "time": "15:22.16",
+            "date": "11/5/25",
+            "event": "WCAL #3",
+            "eventNum": 13733,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
+          },
+          {
+            "rank": 10,
             "runner": "Raymond Meijer",
             "runnerId": 8727,
             "gradYear": 2013,
@@ -27739,30 +27133,6 @@
             "event": "WCAL Finals",
             "eventNum": 2617,
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=2617&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Matthew Richardson",
-            "runnerId": 60947,
-            "gradYear": 2017,
-            "gradeAtRace": "Jr",
-            "time": "15:27.2",
-            "date": "11/4/15",
-            "event": "WCAL Finals",
-            "eventNum": 4620,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=4620&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Lawrence Smith",
-            "runnerId": 3147,
-            "gradYear": 2009,
-            "gradeAtRace": "Sr",
-            "time": "15:29",
-            "date": "11/5/08",
-            "event": "WCAL Finals",
-            "eventNum": 502,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=502&gender=u"
           }
         ],
         "Freshman": [
@@ -27840,6 +27210,30 @@
           },
           {
             "rank": 7,
+            "runner": "Duncan Burk",
+            "runnerId": 332443,
+            "gradYear": 2027,
+            "gradeAtRace": "Fr",
+            "time": "16:35.6",
+            "date": "11/1/23",
+            "event": "WCAL #3",
+            "eventNum": 12084,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=12084&gender=u"
+          },
+          {
+            "rank": 8,
+            "runner": "Dominic Erickson",
+            "runnerId": 375163,
+            "gradYear": 2029,
+            "gradeAtRace": "Fr",
+            "time": "16:40.37",
+            "date": "11/5/25",
+            "event": "WCAL #3",
+            "eventNum": 13733,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
+          },
+          {
+            "rank": 9,
             "runner": "Christian Yarwood",
             "runnerId": 152074,
             "gradYear": 2021,
@@ -27851,7 +27245,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=6640&gender=u"
           },
           {
-            "rank": 8,
+            "rank": 10,
             "runner": "Neerav Gade",
             "runnerId": 80608,
             "gradYear": 2018,
@@ -27861,30 +27255,6 @@
             "event": "WCAL Finals",
             "eventNum": 3948,
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3948&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Richard Tan",
-            "runnerId": 184648,
-            "gradYear": 2004,
-            "gradeAtRace": "Fr",
-            "time": "16:52",
-            "date": "11/1/00",
-            "event": "WCAL Finals",
-            "eventNum": 5255,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5255&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Luke Pinkel",
-            "runnerId": 102815,
-            "gradYear": 2019,
-            "gradeAtRace": "Fr",
-            "time": "16:52.6",
-            "date": "11/4/15",
-            "event": "WCAL Finals",
-            "eventNum": 4620,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=4620&gender=u"
           }
         ],
         "Sophomore": [
@@ -28060,6 +27430,18 @@
           },
           {
             "rank": 5,
+            "runner": "Camilo Restrepo",
+            "runnerId": 333993,
+            "gradYear": 2026,
+            "gradeAtRace": "Sr",
+            "time": "16:05.91",
+            "date": "11/5/25",
+            "event": "WCAL #3",
+            "eventNum": 13733,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
+          },
+          {
+            "rank": 6,
             "runner": "Daniel Vaca",
             "runnerId": 152070,
             "gradYear": 2021,
@@ -28071,7 +27453,19 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=8284&gender=u"
           },
           {
-            "rank": 6,
+            "rank": 7,
+            "runner": "Aiden Baldock",
+            "runnerId": 303723,
+            "gradYear": 2026,
+            "gradeAtRace": "Sr",
+            "time": "16:09.81",
+            "date": "11/5/25",
+            "event": "WCAL #3",
+            "eventNum": 13733,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
+          },
+          {
+            "rank": 8,
             "runner": "Matthew Busse",
             "runnerId": 60946,
             "gradYear": 2016,
@@ -28083,7 +27477,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=4620&gender=u"
           },
           {
-            "rank": 7,
+            "rank": 9,
             "runner": "Ross D'orfani",
             "runnerId": 102823,
             "gradYear": 2019,
@@ -28095,7 +27489,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5580&gender=u"
           },
           {
-            "rank": 8,
+            "rank": 10,
             "runner": "Bennet Shaw",
             "runnerId": 30486,
             "gradYear": 2015,
@@ -28105,30 +27499,6 @@
             "event": "WCAL Finals",
             "eventNum": 3948,
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3948&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Benjamin Micallef",
-            "runnerId": 60920,
-            "gradYear": 2017,
-            "gradeAtRace": "Jr",
-            "time": "16:15.9",
-            "date": "11/4/15",
-            "event": "WCAL Finals",
-            "eventNum": 4620,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=4620&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Marcus Avila",
-            "runnerId": 46343,
-            "gradYear": 2016,
-            "gradeAtRace": "Sr",
-            "time": "16:15.9",
-            "date": "11/4/15",
-            "event": "WCAL Finals",
-            "eventNum": 4620,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=4620&gender=u"
           }
         ],
         "Varsity": [
@@ -28170,6 +27540,18 @@
           },
           {
             "rank": 4,
+            "runner": "Stephen Sziebert",
+            "runnerId": 302592,
+            "gradYear": 2026,
+            "gradeAtRace": "Sr",
+            "time": "15:06.15",
+            "date": "11/5/25",
+            "event": "WCAL #3",
+            "eventNum": 13733,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
+          },
+          {
+            "rank": 5,
             "runner": "Alex Scales",
             "runnerId": 80582,
             "gradYear": 2018,
@@ -28181,7 +27563,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5580&gender=u"
           },
           {
-            "rank": 5,
+            "rank": 6,
             "runner": "Neil Davis",
             "runnerId": 85490,
             "gradYear": 2001,
@@ -28193,7 +27575,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=5255&gender=u"
           },
           {
-            "rank": 6,
+            "rank": 7,
             "runner": "Clem Welsh",
             "runnerId": 152096,
             "gradYear": 2021,
@@ -28205,7 +27587,7 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=8284&gender=u"
           },
           {
-            "rank": 7,
+            "rank": 8,
             "runner": "Galen Topper",
             "runnerId": 152075,
             "gradYear": 2021,
@@ -28217,7 +27599,19 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=8284&gender=u"
           },
           {
-            "rank": 8,
+            "rank": 9,
+            "runner": "Ben Penzel",
+            "runnerId": 314810,
+            "gradYear": 2026,
+            "gradeAtRace": "Sr",
+            "time": "15:22.16",
+            "date": "11/5/25",
+            "event": "WCAL #3",
+            "eventNum": 13733,
+            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=13733&gender=u"
+          },
+          {
+            "rank": 10,
             "runner": "Raymond Meijer",
             "runnerId": 8727,
             "gradYear": 2013,
@@ -28227,30 +27621,6 @@
             "event": "WCAL Finals",
             "eventNum": 2617,
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=2617&gender=u"
-          },
-          {
-            "rank": 9,
-            "runner": "Matthew Richardson",
-            "runnerId": 60947,
-            "gradYear": 2017,
-            "gradeAtRace": "Jr",
-            "time": "15:27.2",
-            "date": "11/4/15",
-            "event": "WCAL Finals",
-            "eventNum": 4620,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=4620&gender=u"
-          },
-          {
-            "rank": 10,
-            "runner": "Lawrence Smith",
-            "runnerId": 3147,
-            "gradYear": 2009,
-            "gradeAtRace": "Sr",
-            "time": "15:29",
-            "date": "11/5/08",
-            "event": "WCAL Finals",
-            "eventNum": 502,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=502&gender=u"
           }
         ]
       }
