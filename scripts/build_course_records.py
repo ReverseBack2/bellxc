@@ -76,6 +76,8 @@ def canonical_race_name(name):
     value = re.sub(r"\s+", " ", name.strip())
     if re.search(r"\bBaylands\s+Invitational\b", value, re.I):
         return "Baylands Invitational"
+    if re.fullmatch(r"Crystal Springs (?:Invitational|Invite)", value, re.I):
+        return "Crystal Springs Invitational"
 
     wcal = re.fullmatch(r"WCAL\s*(?:#\s*)?(1|2|3|I|II|III)", value, re.I)
     if wcal:
@@ -300,7 +302,7 @@ payload = {
         "failedEventCount": len(failed_events),
         "failedEvents": failed_events,
     },
-    "methodology": "Top 10 lists are grouped by race name, exact XCStats course name, and race distance, so different meets at the same venue are not mixed. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
+    "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
     "courses": configs,
 }
 OUT.parent.mkdir(parents=True, exist_ok=True)
