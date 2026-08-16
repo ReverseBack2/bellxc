@@ -2,7 +2,7 @@ name: XCStats Course Records Research
 
 on:
   push:
-    branches: [course-records]
+    branches: [main]
     paths:
       - 'scripts/build_course_records.py'
       - '.github/workflows/xcstats-research.yml'
@@ -31,9 +31,9 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated changes"
           else
-            git commit -m "Generate verified XCStats course records"
-            git pull --rebase origin course-records
-            git push origin HEAD:course-records
+            git commit -m "Regenerate course records with grade-based class lists"
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
       - uses: actions/setup-node@v4
         with:
