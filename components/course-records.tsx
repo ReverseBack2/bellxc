@@ -1,6 +1,6 @@
 "use client";
 
-// Course Records groups postseason CCS and State performances by class year.
+// Course Records includes years used for each course/distance configuration.
 import { useMemo, useState } from "react";
 import records from "@/data/course-records.json";
 import styles from "./course-records.module.css";
