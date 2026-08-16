@@ -21,7 +21,7 @@ type RaceCourse = {
   categories: string[];
   performanceCount: number;
   uniqueRunnerCount: number;
-  records: Record<string, RecordRow[]>;
+  records: Partial<Record<string, RecordRow[]>>;
 };
 
 function slugify(value: string) {
@@ -45,7 +45,7 @@ function displayDate(value: string) {
 }
 
 export function CourseRecordsPage() {
-  const races = records.courses as RaceCourse[];
+  const races = records.courses as unknown as RaceCourse[];
 
   return (
     <div className={styles.page}>
