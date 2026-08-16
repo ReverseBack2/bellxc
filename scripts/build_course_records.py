@@ -90,9 +90,13 @@ def canonical_race_name(name):
 
 def categories_for_race(race):
     # Baylands Invitational is raced by school grade, not JV/Varsity squad.
-    # State is varsity-only, so class-year records are more useful than a redundant
-    # Varsity list and there is no JV race at State.
-    if race == "Baylands Invitational" or re.search(r"\bState\b", race, re.I):
+    # State and CCS are varsity-only postseason meets, so class-year records are
+    # more useful than a redundant Varsity list and there is no JV race.
+    if (
+        race == "Baylands Invitational"
+        or re.search(r"\bState\b", race, re.I)
+        or re.search(r"\bCentral Coast Section\b|\bCCS\b", race, re.I)
+    ):
         return ["Overall", "Freshman", "Sophomore", "Junior", "Senior"]
     return ["Overall", "Freshman", "Sophomore", "JV", "Varsity"]
 
@@ -302,7 +306,7 @@ payload = {
         "failedEventCount": len(failed_events),
         "failedEvents": failed_events,
     },
-    "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
+    "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
     "courses": configs,
 }
 OUT.parent.mkdir(parents=True, exist_ok=True)
