@@ -202,6 +202,8 @@ for idx, event in enumerate(events, 1):
 print(f"Parsed {len(performances)} Bellarmine performances; failures={len(failed_events)}")
 
 # 3. Rank best unique runner performance by course + distance and category.
+# Freshman/Sophomore are class-year records based on grade at race, regardless of squad.
+# JV/Varsity remain race-division records based on the XCStats Squad field.
 by_config = defaultdict(list)
 for p in performances:
     by_config[(p["course"], p["distance"])].append(p)
@@ -211,7 +213,14 @@ configs = []
 for (course, distance), rows in sorted(by_config.items(), key=lambda kv: (kv[0][0].lower(), float(kv[0][1]) if re.fullmatch(r"\d+(?:\.\d+)?", kv[0][1]) else 999)):
     lists = {}
     for category in categories:
-        eligible = rows if category == "Overall" else [p for p in rows if p["squad"] == category]
+        if category == "Overall":
+            eligible = rows
+        elif category == "Freshman":
+            eligible = [p for p in rows if p["grade"] == "Fr"]
+        elif category == "Sophomore":
+            eligible = [p for p in rows if p["grade"] == "So"]
+        else:
+            eligible = [p for p in rows if p["squad"] == category]
         best = {}
         for p in eligible:
             existing = best.get(p["runnerId"])
@@ -252,7 +261,7 @@ payload = {
         "failedEventCount": len(failed_events),
         "failedEvents": failed_events,
     },
-    "methodology": "Top 10 uses each runner's single fastest verified Bellarmine XCStats performance for the exact XCStats course name and race distance. Division lists use XCStats race Squad (Fr, So, JV, V), not the runner's grade alone.",
+    "methodology": "Top 10 uses each runner's single fastest verified Bellarmine XCStats performance for the exact XCStats course name and race distance. Freshman and Sophomore lists use grade at race (Fr/So) regardless of squad, so class records include runners competing up in JV or Varsity. JV and Varsity lists use the XCStats race Squad field.",
     "courses": configs,
 }
 OUT.parent.mkdir(parents=True, exist_ok=True)
