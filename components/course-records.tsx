@@ -22,6 +22,9 @@ type RaceCourse = {
   race: string;
   course: string;
   distanceMiles: string;
+  firstYear?: number;
+  lastYear?: number;
+  yearsRun?: number[];
   categories: string[];
   performanceCount: number;
   uniqueRunnerCount: number;
@@ -53,8 +56,20 @@ function displayDate(value: string) {
   return `${month}/${day}/${fullYear}`;
 }
 
+function yearRange(variant: RaceCourse) {
+  if (!variant.firstYear || !variant.lastYear) return "";
+  return variant.firstYear === variant.lastYear
+    ? `${variant.firstYear}`
+    : `${variant.firstYear}–${variant.lastYear}`;
+}
+
 function variantLabel(variant: RaceCourse) {
   return `${cleanCourseName(variant.course)} · ${variant.distanceMiles} mi`;
+}
+
+function variantDisplayLabel(variant: RaceCourse) {
+  const years = yearRange(variant);
+  return years ? `${variantLabel(variant)} · ${years}` : variantLabel(variant);
 }
 
 export function CourseRecordsPage() {
@@ -82,14 +97,14 @@ export function CourseRecordsPage() {
         <p className={styles.eyebrow}>Bellarmine history</p>
         <h1>Course Records</h1>
         <p className={styles.lede}>
-          The fastest verified Bellarmine performances in the XCStats archive, grouped by race with course and distance selectors where needed.
+          The fastest verified Bellarmine performances in the XCStats archive, grouped by race with course, distance, and years-used selectors where needed.
         </p>
       </header>
 
       <aside className={styles.method}>
         <strong>How the lists work</strong>
         <p>
-          Each race appears once below. When the same race has used multiple courses or distances, choose the course configuration from the selector in that race section. Each runner appears once per list with his fastest qualifying performance for that exact race and course configuration. Class-year lists use grade at race even when an athlete races up. Baylands Invitational, Central Coast Section Finals (CCS), and the State meet use Freshman, Sophomore, Junior, and Senior class lists.
+          Each race appears once below. When the same race has used multiple courses or distances, choose the course configuration from the selector in that race section; the years show when that configuration appears in the XCStats archive. Equivalent 5K and 3.1-mile labels are treated as the same distance. Each runner appears once per list with his fastest qualifying performance for that exact race and course configuration. Class-year lists use grade at race even when an athlete races up. Baylands Invitational, Central Coast Section Finals (CCS), and the State meet use Freshman, Sophomore, Junior, and Senior class lists.
         </p>
       </aside>
 
@@ -103,7 +118,7 @@ export function CourseRecordsPage() {
                 <strong>{group.race}</strong>
                 <span>
                   {group.variants.length === 1
-                    ? variantLabel(group.variants[0])
+                    ? variantDisplayLabel(group.variants[0])
                     : `${group.variants.length} course configurations`}
                 </span>
               </a>
@@ -124,7 +139,7 @@ export function CourseRecordsPage() {
                 <h2>{group.race}</h2>
                 {group.variants.length > 1 ? (
                   <label className={styles.variantPicker}>
-                    <span>Course / distance</span>
+                    <span>Course / distance / years</span>
                     <select
                       value={selectedIndex}
                       onChange={(event) =>
@@ -135,8 +150,8 @@ export function CourseRecordsPage() {
                       }
                     >
                       {group.variants.map((variant, index) => (
-                        <option key={`${variant.course}-${variant.distanceMiles}`} value={index}>
-                          {variantLabel(variant)}
+                        <option key={`${variant.course}-${variant.distanceMiles}-${variant.firstYear ?? ""}-${variant.lastYear ?? ""}`} value={index}>
+                          {variantDisplayLabel(variant)}
                         </option>
                       ))}
                     </select>
@@ -145,7 +160,7 @@ export function CourseRecordsPage() {
               </div>
 
               <div className={styles.courseMeta}>
-                <strong>{variantLabel(race)}</strong>
+                <strong>{variantDisplayLabel(race)}</strong>
                 {race.performanceCount.toLocaleString()} performances · {race.uniqueRunnerCount.toLocaleString()} runners
               </div>
             </div>
