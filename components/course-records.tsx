@@ -1,6 +1,6 @@
 "use client";
 
-// Course Records includes years used for each course/distance configuration.
+// Course Records includes years used for each course/distance configuration and canonical meet names.
 import { useMemo, useState } from "react";
 import records from "@/data/course-records.json";
 import styles from "./course-records.module.css";
