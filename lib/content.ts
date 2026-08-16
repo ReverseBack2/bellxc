@@ -2,6 +2,7 @@ export const navigation = [
   { slug: "about", label: "About" },
   { slug: "calendar", label: "Calendar" },
   { slug: "meet-info", label: "Meet Info" },
+  { slug: "course-records", label: "Records" },
   { slug: "useful-links", label: "Useful Links" },
   { slug: "photos", label: "Photos" },
 ] as const;
