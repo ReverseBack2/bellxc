@@ -78,7 +78,7 @@
       }
     ]
   },
-  "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and normalized race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. WCAL 3 and WCAL Finals are treated as the same meet. Equivalent 5K and 3.1-mile labels are grouped together. Each course configuration includes the years it appears in the XCStats archive. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
+  "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and normalized race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. WCAL 3 and WCAL Finals are treated as the same meet. Serra Invitational naming variants are treated as the same meet. Equivalent 5K and 3.1-mile labels are grouped together. Each course configuration includes the years it appears in the XCStats archive. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
   "courses": [
     {
       "race": "Artichoke Invitational",
@@ -19758,7 +19758,7 @@
         "JV",
         "Varsity"
       ],
-      "performanceCount": 1115,
+      "performanceCount": 1117,
       "uniqueRunnerCount": 656,
       "records": {
         "Overall": [
@@ -20371,57 +20371,6 @@
             "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=7366&gender=u"
           }
         ]
-      }
-    },
-    {
-      "race": "Serra Invitational Adds",
-      "course": "Crystal Springs",
-      "distanceMiles": "2.95",
-      "firstYear": 2013,
-      "lastYear": 2013,
-      "yearsRun": [
-        2013
-      ],
-      "categories": [
-        "Overall",
-        "Freshman",
-        "Sophomore",
-        "JV",
-        "Varsity"
-      ],
-      "performanceCount": 2,
-      "uniqueRunnerCount": 2,
-      "records": {
-        "Overall": [
-          {
-            "rank": 1,
-            "runner": "Bennet Shaw",
-            "runnerId": 30486,
-            "gradYear": 2015,
-            "gradeAtRace": "Jr",
-            "time": "17:05",
-            "date": "10/12/13",
-            "event": "Serra Invitational Adds",
-            "eventNum": 3677,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3677&gender=u"
-          },
-          {
-            "rank": 2,
-            "runner": "Elias Masri",
-            "runnerId": 30492,
-            "gradYear": 2015,
-            "gradeAtRace": "Jr",
-            "time": "18:06",
-            "date": "10/12/13",
-            "event": "Serra Invitational Adds",
-            "eventNum": 3677,
-            "sourceUrl": "https://www.xcstats.com/event_results.php?school_id=839&event_num=3677&gender=u"
-          }
-        ],
-        "Freshman": [],
-        "Sophomore": [],
-        "JV": [],
-        "Varsity": []
       }
     },
     {
