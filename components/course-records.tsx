@@ -31,10 +31,17 @@ function slugify(value: string) {
     .replace(/^-|-$/g, "");
 }
 
+function cleanCourseName(value: string) {
+  return value.replace(/\s*\(\s*Map\s*\)\s*$/i, "").trim();
+}
+
 function displayDate(value: string) {
   const [month, day, shortYear] = value.split("/");
   if (!month || !day || !shortYear) return value;
-  return `${month}/${day}/20${shortYear}`;
+  const year = Number(shortYear);
+  if (!Number.isFinite(year)) return value;
+  const fullYear = year <= 30 ? 2000 + year : 1900 + year;
+  return `${month}/${day}/${fullYear}`;
 }
 
 export function CourseRecordsPage() {
@@ -64,7 +71,7 @@ export function CourseRecordsPage() {
             const id = slugify(`${course.course}-${course.distanceMiles}`);
             return (
               <a key={id} href={`#${id}`}>
-                <strong>{course.course}</strong>
+                <strong>{cleanCourseName(course.course)}</strong>
                 <span>{course.distanceMiles} mi · {course.uniqueRunnerCount} runners</span>
               </a>
             );
@@ -77,7 +84,7 @@ export function CourseRecordsPage() {
         return (
           <section className={styles.course} id={id} key={id}>
             <div className={styles.courseHead}>
-              <h2>{course.course}</h2>
+              <h2>{cleanCourseName(course.course)}</h2>
               <div className={styles.courseMeta}>
                 <strong>{course.distanceMiles} miles</strong>
                 {course.performanceCount.toLocaleString()} performances · {course.uniqueRunnerCount.toLocaleString()} runners
