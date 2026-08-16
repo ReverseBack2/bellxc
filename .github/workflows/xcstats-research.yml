@@ -16,12 +16,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
       - run: python scripts/build_course_records.py
-      - name: Commit generated records
+      - name: Commit generated records on latest branch
         run: |
           git config user.name "BellXC Records Bot"
           git config user.email "actions@users.noreply.github.com"
@@ -30,5 +32,13 @@ jobs:
             echo "No generated changes"
           else
             git commit -m "Generate verified XCStats course records"
-            git push
+            git pull --rebase origin course-records
+            git push origin HEAD:course-records
           fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
