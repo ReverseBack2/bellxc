@@ -71,6 +71,18 @@ def normalize_squad(squad):
     return None
 
 
+def normalize_distance(distance):
+    """Normalize equivalent XC distance labels before grouping records."""
+    value = re.sub(r"\s+", "", distance.strip().lower())
+    if value in {"5k", "5km", "5kilometers", "5kilometres"}:
+        return "3.1"
+    if value.endswith("mi"):
+        value = value[:-2]
+    if value.endswith("miles"):
+        value = value[:-5]
+    return value
+
+
 def canonical_race_name(name):
     """Keep different meets separate while collapsing obvious year-to-year spelling variants."""
     value = re.sub(r"\s+", " ", name.strip())
@@ -216,7 +228,8 @@ for idx, event in enumerate(events, 1):
         raw_squad = cells[header_map["Squad"]].get_text(" ", strip=True)
         squad = normalize_squad(raw_squad)
         time_text = cells[header_map["Time"]].get_text(" ", strip=True)
-        dist = cells[header_map["Dist"]].get_text(" ", strip=True)
+        raw_dist = cells[header_map["Dist"]].get_text(" ", strip=True)
+        dist = normalize_distance(raw_dist)
         sec = seconds(time_text)
         if sec is None or not dist:
             continue
@@ -230,6 +243,7 @@ for idx, event in enumerate(events, 1):
             "time": time_text,
             "seconds": sec,
             "distance": dist,
+            "rawDistance": raw_dist,
             "course": event["course"],
             "race": event["race"],
             "event": event["event"],
@@ -245,8 +259,9 @@ for idx, event in enumerate(events, 1):
 
 print(f"Parsed {len(performances)} Bellarmine performances; failures={len(failed_events)}")
 
-# 3. Rank by race name + exact course + distance. This keeps, for example,
-# Baylands Invitational records separate from WCAL 2 records at Baylands Park.
+# 3. Rank by race name + exact course + normalized distance. This keeps, for example,
+# Baylands Invitational records separate from WCAL 2 while treating 5K and 3.1 miles
+# as the same distance label.
 by_config = defaultdict(list)
 for p in performances:
     by_config[(p["race"], p["course"], p["distance"])].append(p)
@@ -285,10 +300,14 @@ for (race, course, distance), rows in sorted(
             }
             for i, p in enumerate(ranked)
         ]
+    years = sorted({p["year"] for p in rows})
     configs.append({
         "race": race,
         "course": course,
         "distanceMiles": distance,
+        "firstYear": years[0],
+        "lastYear": years[-1],
+        "yearsRun": years,
         "categories": categories,
         "performanceCount": len(rows),
         "uniqueRunnerCount": len({p["runnerId"] for p in rows}),
@@ -306,7 +325,7 @@ payload = {
         "failedEventCount": len(failed_events),
         "failedEvents": failed_events,
     },
-    "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
+    "methodology": "Top 10 lists are grouped by canonical race name, exact XCStats course name, and normalized race distance, so different meets at the same venue are not mixed while obvious naming variants of the same meet are merged. Equivalent 5K and 3.1-mile labels are grouped together. Each course configuration includes the years it appears in the XCStats archive. Each runner appears once per list with his fastest qualifying performance. Freshman/Sophomore class records use grade at race regardless of squad. Baylands Invitational, CCS, and State use Freshman, Sophomore, Junior, and Senior class lists. JV/Varsity lists are used for other meets from the XCStats Squad field.",
     "courses": configs,
 }
 OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -314,4 +333,5 @@ OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
 print(f"Wrote {OUT}: {len(configs)} race-course-distance configurations")
 for c in configs:
     counts = ", ".join(f"{k}={len(v)}" for k, v in c["records"].items())
-    print(f"CONFIG {c['race']} :: {c['course']} {c['distanceMiles']} mi :: {counts}")
+    years = str(c["firstYear"]) if c["firstYear"] == c["lastYear"] else f"{c['firstYear']}-{c['lastYear']}"
+    print(f"CONFIG {c['race']} :: {c['course']} {c['distanceMiles']} mi :: {years} :: {counts}")
