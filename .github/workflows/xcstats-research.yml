@@ -27,12 +27,15 @@ jobs:
         run: |
           git config user.name "BellXC Records Bot"
           git config user.email "actions@users.noreply.github.com"
+          cp data/course-records.json /tmp/course-records.json
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/course-records.json data/course-records.json
           git add data/course-records.json
           if git diff --cached --quiet; then
             echo "No generated changes"
           else
-            git commit -m "Regenerate course records with grade-based class lists"
-            git pull --rebase origin main
+            git commit -m "Regenerate course records"
             git push origin HEAD:main
           fi
       - uses: actions/setup-node@v4
