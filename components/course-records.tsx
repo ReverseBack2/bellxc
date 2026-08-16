@@ -1,6 +1,7 @@
 import records from "@/data/course-records.json";
 import styles from "./course-records.module.css";
 
+// Class-year lists use grade at race; JV and Varsity lists use XCStats squad.
 const categories = ["Overall", "Freshman", "Sophomore", "JV", "Varsity"] as const;
 
 type RecordRow = {
