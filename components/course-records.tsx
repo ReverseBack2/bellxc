@@ -1,3 +1,6 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import records from "@/data/course-records.json";
 import styles from "./course-records.module.css";
 
@@ -24,6 +27,11 @@ type RaceCourse = {
   records: Partial<Record<string, RecordRow[]>>;
 };
 
+type RaceGroup = {
+  race: string;
+  variants: RaceCourse[];
+};
+
 function slugify(value: string) {
   return value
     .toLowerCase()
@@ -44,8 +52,28 @@ function displayDate(value: string) {
   return `${month}/${day}/${fullYear}`;
 }
 
+function variantLabel(variant: RaceCourse) {
+  return `${cleanCourseName(variant.course)} · ${variant.distanceMiles} mi`;
+}
+
 export function CourseRecordsPage() {
-  const races = records.courses as unknown as RaceCourse[];
+  const raceCourses = records.courses as unknown as RaceCourse[];
+  const groups = useMemo<RaceGroup[]>(() => {
+    const grouped = new Map<string, RaceCourse[]>();
+    for (const raceCourse of raceCourses) {
+      const existing = grouped.get(raceCourse.race) ?? [];
+      existing.push(raceCourse);
+      grouped.set(raceCourse.race, existing);
+    }
+    return Array.from(grouped, ([race, variants]) => ({
+      race,
+      variants: variants.sort((a, b) =>
+        variantLabel(a).localeCompare(variantLabel(b), undefined, { numeric: true })
+      ),
+    }));
+  }, [raceCourses]);
+
+  const [selectedVariants, setSelectedVariants] = useState<Record<string, number>>({});
 
   return (
     <div className={styles.page}>
@@ -60,33 +88,63 @@ export function CourseRecordsPage() {
       <aside className={styles.method}>
         <strong>How the lists work</strong>
         <p>
-          Different races at the same venue are kept separate. Each runner appears once per list with his fastest qualifying performance in that race. Freshman and Sophomore class records use grade at race even when an athlete races up. Baylands Invitational is organized by grade, so its lists are Freshman, Sophomore, Junior, and Senior rather than JV and Varsity. Other meets use the applicable XCStats race squads.
+          Each race appears once below. When the same race has used multiple courses or distances, choose the course configuration from the selector in that race section. Each runner appears once per list with his fastest qualifying performance for that exact race and course configuration. Class-year lists use grade at race even when an athlete races up. Baylands Invitational and the State meet use Freshman, Sophomore, Junior, and Senior class lists.
         </p>
       </aside>
 
       <nav className={styles.index} aria-label="Race record sections">
         <h2>Races</h2>
         <div className={styles.courseLinks}>
-          {races.map((race) => {
-            const id = slugify(`${race.race}-${race.course}-${race.distanceMiles}`);
+          {groups.map((group) => {
+            const id = slugify(group.race);
             return (
-              <a key={id} href={`#${id}`}>
-                <strong>{race.race}</strong>
-                <span>{cleanCourseName(race.course)} · {race.distanceMiles} mi</span>
+              <a key={group.race} href={`#${id}`}>
+                <strong>{group.race}</strong>
+                <span>
+                  {group.variants.length === 1
+                    ? variantLabel(group.variants[0])
+                    : `${group.variants.length} course configurations`}
+                </span>
               </a>
             );
           })}
         </div>
       </nav>
 
-      {races.map((race) => {
-        const id = slugify(`${race.race}-${race.course}-${race.distanceMiles}`);
+      {groups.map((group) => {
+        const id = slugify(group.race);
+        const selectedIndex = Math.min(selectedVariants[group.race] ?? 0, group.variants.length - 1);
+        const race = group.variants[selectedIndex];
+
         return (
-          <section className={styles.course} id={id} key={id}>
+          <section className={styles.course} id={id} key={group.race}>
             <div className={styles.courseHead}>
-              <h2>{race.race}</h2>
+              <div className={styles.raceTitleBlock}>
+                <h2>{group.race}</h2>
+                {group.variants.length > 1 ? (
+                  <label className={styles.variantPicker}>
+                    <span>Course / distance</span>
+                    <select
+                      value={selectedIndex}
+                      onChange={(event) =>
+                        setSelectedVariants((current) => ({
+                          ...current,
+                          [group.race]: Number(event.target.value),
+                        }))
+                      }
+                    >
+                      {group.variants.map((variant, index) => (
+                        <option key={`${variant.course}-${variant.distanceMiles}`} value={index}>
+                          {variantLabel(variant)}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                ) : null}
+              </div>
+
               <div className={styles.courseMeta}>
-                <strong>{cleanCourseName(race.course)} · {race.distanceMiles} miles</strong>
+                <strong>{variantLabel(race)}</strong>
                 {race.performanceCount.toLocaleString()} performances · {race.uniqueRunnerCount.toLocaleString()} runners
               </div>
             </div>
@@ -95,7 +153,7 @@ export function CourseRecordsPage() {
               {race.categories.map((category, categoryIndex) => {
                 const rows = race.records[category] ?? [];
                 return (
-                  <details className={styles.group} key={category} open={categoryIndex === 0}>
+                  <details className={styles.group} key={`${variantLabel(race)}-${category}`} open={categoryIndex === 0}>
                     <summary>
                       <span>{category} Top 10</span>
                       <span className={styles.count}>{rows.length} verified</span>
