@@ -72,6 +72,48 @@ function variantDisplayLabel(variant: RaceCourse) {
   return years ? `${variantLabel(variant)} · ${years}` : variantLabel(variant);
 }
 
+function latestRaceYear(group: RaceGroup) {
+  return Math.max(...group.variants.map((variant) => variant.lastYear ?? 0));
+}
+
+function isLeagueMeet(race: string) {
+  return (
+    race === "WCAL 1" ||
+    race === "WCAL 2" ||
+    race === "WCAL Finals" ||
+    race === "Central Coast Section Finals" ||
+    race === "CA State Finals"
+  );
+}
+
+const leagueOrder = [
+  "WCAL 1",
+  "WCAL 2",
+  "WCAL Finals",
+  "Central Coast Section Finals",
+  "CA State Finals",
+];
+
+function RaceIndexLinks({ groups }: { groups: RaceGroup[] }) {
+  return (
+    <div className={styles.courseLinks}>
+      {groups.map((group) => {
+        const id = slugify(group.race);
+        return (
+          <a key={group.race} href={`#${id}`}>
+            <strong>{group.race}</strong>
+            <span>
+              {group.variants.length === 1
+                ? variantDisplayLabel(group.variants[0])
+                : `${group.variants.length} course configurations · latest ${latestRaceYear(group)}`}
+            </span>
+          </a>
+        );
+      })}
+    </div>
+  );
+}
+
 export function CourseRecordsPage() {
   const raceCourses = records.courses as unknown as RaceCourse[];
   const groups = useMemo<RaceGroup[]>(() => {
@@ -89,6 +131,26 @@ export function CourseRecordsPage() {
     }));
   }, [raceCourses]);
 
+  const leagueGroups = useMemo(
+    () =>
+      groups
+        .filter((group) => isLeagueMeet(group.race))
+        .sort((a, b) => leagueOrder.indexOf(a.race) - leagueOrder.indexOf(b.race)),
+    [groups]
+  );
+
+  const invitationalGroups = useMemo(
+    () =>
+      groups
+        .filter((group) => !isLeagueMeet(group.race))
+        .sort((a, b) => {
+          const yearDifference = latestRaceYear(b) - latestRaceYear(a);
+          return yearDifference || a.race.localeCompare(b.race);
+        }),
+    [groups]
+  );
+
+  const displayGroups = [...leagueGroups, ...invitationalGroups];
   const [selectedVariants, setSelectedVariants] = useState<Record<string, number>>({});
 
   return (
@@ -110,24 +172,13 @@ export function CourseRecordsPage() {
 
       <nav className={styles.index} aria-label="Race record sections">
         <h2>Races</h2>
-        <div className={styles.courseLinks}>
-          {groups.map((group) => {
-            const id = slugify(group.race);
-            return (
-              <a key={group.race} href={`#${id}`}>
-                <strong>{group.race}</strong>
-                <span>
-                  {group.variants.length === 1
-                    ? variantDisplayLabel(group.variants[0])
-                    : `${group.variants.length} course configurations`}
-                </span>
-              </a>
-            );
-          })}
-        </div>
+        <h3>League Meets</h3>
+        <RaceIndexLinks groups={leagueGroups} />
+        <h3>Invitationals</h3>
+        <RaceIndexLinks groups={invitationalGroups} />
       </nav>
 
-      {groups.map((group) => {
+      {displayGroups.map((group) => {
         const id = slugify(group.race);
         const selectedIndex = Math.min(selectedVariants[group.race] ?? 0, group.variants.length - 1);
         const race = group.variants[selectedIndex];
