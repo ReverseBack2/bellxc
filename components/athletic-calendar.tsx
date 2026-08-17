@@ -18,6 +18,13 @@ const races = [
     eventUrl: "https://www.athletic.net/CrossCountry/meet/273592",
   },
   {
+    date: "2026-09-12",
+    title: "Lowell Invitational",
+    location: "Golden Gate Park, San Francisco, CA",
+    locationUrl: "https://www.google.com/maps/search/?api=1&query=Golden+Gate+Park+San+Francisco+CA",
+    eventUrl: athleticNetUrl,
+  },
+  {
     date: "2026-09-23",
     title: "WCAL I",
     location: "Polo Fields, Golden Gate Park, San Francisco, CA",
