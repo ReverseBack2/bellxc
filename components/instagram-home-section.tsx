@@ -66,10 +66,10 @@ export function InstagramHomeSection() {
           borderRadius: 2,
         }}
       >
-        <div className="sk-ww-social-feeds" data-embed-id="25708578"></div>
+        <div className="sk-ww-instagram-reels" data-embed-id="25708579"></div>
       </div>
 
-      <Script src="https://widgets.sociablekit.com/social-feeds/widget.js" strategy="afterInteractive" />
+      <Script src="https://widgets.sociablekit.com/instagram-reels/widget.js" strategy="afterInteractive" />
     </aside>
   );
 }
