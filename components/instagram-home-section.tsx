@@ -1,5 +1,5 @@
 import Script from "next/script";
-import { ArrowUpRight, Instagram } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const instagramUrl = "https://www.instagram.com/bellarminexctf/";
 
@@ -23,7 +23,7 @@ export function InstagramHomeSection() {
         @bellarminexctf
       </h2>
       <a href={instagramUrl} target="_blank" rel="noreferrer" style={{ margin: "14px 0 22px", display: "inline-flex", alignItems: "center", gap: 9, paddingBottom: 7, borderBottom: "1px solid rgba(255,255,255,.6)", fontSize: 11, fontWeight: 800, letterSpacing: ".11em", textTransform: "uppercase" }}>
-        <Instagram size={16} /> Open Instagram <ArrowUpRight size={15} />
+        Open Instagram <ArrowUpRight size={15} />
       </a>
       <div style={{ minHeight: 520, overflow: "hidden", background: "#fff" }}>
         <div className="sk-ww-instagram-reels" data-embed-id="25708579"></div>
