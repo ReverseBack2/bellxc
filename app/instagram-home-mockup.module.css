@@ -1,0 +1,28 @@
+.homeGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 31vw);
+  align-items: start;
+}
+
+.homeMain {
+  min-width: 0;
+}
+
+.instagramColumn {
+  min-width: 0;
+  position: sticky;
+  top: 0;
+  min-height: calc(100vh - 124px);
+  background: #1d3d6e;
+}
+
+@media (max-width: 1050px) {
+  .homeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .instagramColumn {
+    position: static;
+    min-height: 0;
+  }
+}
