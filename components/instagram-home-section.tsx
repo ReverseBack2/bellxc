@@ -24,7 +24,7 @@ export function InstagramHomeSection() {
       <a href={instagramUrl} target="_blank" rel="noreferrer" style={{ margin: "14px 0 20px", display: "inline-flex", alignItems: "center", gap: 9, paddingBottom: 7, borderBottom: "1px solid rgba(255,255,255,.6)", fontSize: 11, fontWeight: 800, letterSpacing: ".11em", textTransform: "uppercase" }}>
         Open Instagram <ArrowUpRight size={15} />
       </a>
-      <div style={{ height: 530, maxHeight: "65vh", overflow: "auto", background: "#fff" }}>
+      <div style={{ height: 570, maxHeight: "70vh", overflow: "auto", background: "#fff" }}>
         <div className="sk-ww-instagram-reels" data-embed-id="25708579"></div>
       </div>
       <Script src="https://widgets.sociablekit.com/instagram-reels/widget.js" strategy="afterInteractive" />
