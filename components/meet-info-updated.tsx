@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, FileText, Flag, Trophy, Users } from "lucide-react";
+import { PdfPreview } from "./pdf-preview";
 
 const scoringPdfPath = `${process.env.PAGES_BASE_PATH ?? ""}/docs/xc-scoring-101.pdf`;
 
@@ -71,7 +72,7 @@ export function Scoring101Page() {
           <a className="text-link" href={scoringPdfPath} target="_blank" rel="noreferrer">Open PDF <ArrowUpRight /></a>
           <a className="text-link" href={scoringPdfPath} download="XC Scoring 101.pdf">Download PDF <ArrowUpRight /></a>
         </div>
-        <iframe src={scoringPdfPath} title="Bellarmine XC Scoring 101 guide" />
+        <PdfPreview src={scoringPdfPath} title="Bellarmine XC Scoring 101 guide" />
       </section>
     </div>
   );
