@@ -29,8 +29,28 @@ jobs:
           import base64
           import hashlib
 
+          expected_parts = {
+              "part-01.b64": (6000, "110200ccb0c077208b5fca6d8d4b2f2fd4d1274cfd7e504f2be9df023d080f01"),
+              "part-02.b64": (6000, "40233919e3f8a82210acbd5ce1a6c31181c9e84b2e017f352f046dfc94182b31"),
+              "part-03.b64": (6000, "97753f729043c4a4c2cdb1446988e9fa5c59afbffdd2b4b67e2e2bcef9552e6d"),
+              "part-04.b64": (6000, "8b01123e34ad887a620e813583a21d2b72a49efdc2ea3f2dd28243c081a3d5bb"),
+              "part-05.b64": (6000, "a2cb108ad399999ab10e13dcb3bc9d7441279478181e0be5f313e0ae8076b7c8"),
+              "part-06.b64": (6000, "1d5ca52e03d56fb2fbd7ed345fa638db12cdb907492fdc7c3a09ed1e83c533d3"),
+              "part-07.b64": (5096, "632ab14abb09cf40810fcadaee95eb93cbd902bb7b1238cbdf8d3f16e9087695"),
+          }
           parts = sorted(Path("data/xc-scoring-101-pdf").glob("part-*.b64"))
-          encoded = "".join(part.read_text().strip() for part in parts)
+          bad = []
+          texts = []
+          for part in parts:
+              text = part.read_text().strip()
+              digest = hashlib.sha256(text.encode()).hexdigest()
+              print(f"{part.name}: len={len(text)} sha256={digest}")
+              if expected_parts.get(part.name) != (len(text), digest):
+                  bad.append(part.name)
+              texts.append(text)
+          if bad:
+              raise SystemExit(f"Scoring PDF source chunks do not match: {', '.join(bad)}")
+          encoded = "".join(texts)
           pdf = base64.b64decode(encoded, validate=True)
           expected_sha256 = "cf7faec2b7b1ceffa08ac927fe9fd018e29b8c0fdbd77089d14dc23b0f61da8e"
           actual_sha256 = hashlib.sha256(pdf).hexdigest()
