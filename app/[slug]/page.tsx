@@ -4,7 +4,8 @@ import { AthleticCalendarPage } from "@/components/athletic-calendar";
 import { CourseRecordsPage } from "@/components/course-records";
 import { ArchivePage, PhotosPage } from "@/components/photo-archives";
 import { AboutPage, Meet101Page, MeetTypesPage, UsefulLinksPage } from "@/components/pages";
-import { MeetInfoPage, Uniform101Page } from "@/components/meet-info";
+import { MeetInfoPage, Scoring101Page } from "@/components/meet-info-updated";
+import { Uniform101Page } from "@/components/meet-info";
 
 const pages = {
   about: <AboutPage />,
@@ -12,6 +13,7 @@ const pages = {
   "meet-info": <MeetInfoPage />,
   meet101: <Meet101Page />,
   uniform101: <Uniform101Page />,
+  scoring101: <Scoring101Page />,
   "meet-types": <MeetTypesPage />,
   "course-records": <CourseRecordsPage />,
   "useful-links": <UsefulLinksPage />,
