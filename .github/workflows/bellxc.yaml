@@ -22,6 +22,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Restore Scoring 101 PDF
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64
+          import hashlib
+
+          parts = sorted(Path("data/xc-scoring-101-pdf").glob("part-*.b64"))
+          encoded = "".join(part.read_text().strip() for part in parts)
+          pdf = base64.b64decode(encoded, validate=True)
+          expected_sha256 = "cf7faec2b7b1ceffa08ac927fe9fd018e29b8c0fdbd77089d14dc23b0f61da8e"
+          actual_sha256 = hashlib.sha256(pdf).hexdigest()
+          if len(pdf) != 30822 or actual_sha256 != expected_sha256:
+              raise SystemExit(f"Scoring PDF validation failed: size={len(pdf)} sha256={actual_sha256}")
+          target = Path("public/docs/xc-scoring-101.pdf")
+          target.parent.mkdir(parents=True, exist_ok=True)
+          target.write_bytes(pdf)
+          print(f"Restored {target} ({len(pdf)} bytes, sha256={actual_sha256})")
+          PY
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
