@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowUpRight, FileText, Flag, Trophy, Users } from "lucide-react";
 
+const scoringPdfPath = `${process.env.PAGES_BASE_PATH ?? ""}/docs/xc-scoring-101.pdf`;
+
 const PageHead = ({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: string }) => (
   <header className="page-head"><p className="eyebrow">{eyebrow}</p><h1>{title}</h1>{intro && <p className="lede">{intro}</p>}</header>
 );
@@ -60,6 +62,16 @@ export function Scoring101Page() {
       <section className="link-section">
         <h2>Examples from the guide</h2>
         <p className="section-intro">Jonathan Ho finished 4th individually, but his team had fewer than five runners, so he was skipped in the team scoring. Gavin Borer was Bellarmine’s sixth finisher and took 10th place for team scoring; his point did not enter Bellarmine’s total, but every team finisher behind him received a place one point higher.</p>
+      </section>
+      <section className="document-card">
+        <div>
+          <FileText />
+          <h2>Cross Country Meet Scoring</h2>
+          <p>Open the September 2026 Scoring 101 guide, or view it directly below.</p>
+          <a className="text-link" href={scoringPdfPath} target="_blank" rel="noreferrer">Open PDF <ArrowUpRight /></a>
+          <a className="text-link" href={scoringPdfPath} download="XC Scoring 101.pdf">Download PDF <ArrowUpRight /></a>
+        </div>
+        <iframe src={scoringPdfPath} title="Bellarmine XC Scoring 101 guide" />
       </section>
     </div>
   );
